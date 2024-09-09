@@ -88,26 +88,54 @@ a {
   padding-top: 54px;
 }
 
-.row{
+.row {
+  display: flex;
 
-  display:flex;
+  justify-content: space-between;
 
-
-  justify-content:space-between;
-
-  align-items:center;
+  align-items: center;
 }
 
-.table-wrapper{
-
-  width:100%;
-
-
+.table-wrapper {
+  width: 100%;
 }
 
-.table-wrapper table{
+.table-wrapper table {
+  width: 100%;
 
-  width:100%;
+  border-collapse: collapse;
+}
+table td {
+  padding: 1rem 1rem;
+}
 
-  border-collapse:collapse;
+table td .table-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+table td .table-buttons button {
+  border: none;
+
+  width: 30px;
+
+  height: 30px;
+
+  background: var(--skyBlue);
+
+  color: var(--white);
+
+  transition: all 0.5s;
+
+  cursor: pointer;
+}
+
+table td .table-buttons button:hover {
+  background: var(--pinkRed);
+}
+
+table td .table-buttons button:nth-child(2) {
+  margin-left: 10px;
 }

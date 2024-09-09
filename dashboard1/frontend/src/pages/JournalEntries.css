@@ -24,20 +24,7 @@
   padding: 10px;
 }
 
-.dashboard .main.journal {
-  padding-right: 1rem;
-}
 
-.dashboard .main.journal .hero-btn {
-  margin-left: 1rem;
-}
-.dashboard .journal-container {
-  background: var(--white);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  height: calc(100vh - 50px);
-  overflow-y: scroll;
-  padding: 1rem;
-}
 .dashboard .journal-container .medium-header {
   border-bottom: 1px solid var(--skyBlue);
 }

@@ -10,12 +10,11 @@ import { IoFilterSharp } from "react-icons/io5";
 import { faDisplay } from "@fortawesome/free-solid-svg-icons";
 
 const JournalEntries = () => {
-  // State to manage the visibility of the file input
+ 
   const [showFileInput, setShowFileInput] = useState(false);
 
-  // Function to handle print button click
   const handlePrint = () => {
-    window.print(); // Trigger browser print functionality
+    window.print(); 
   };
 
   const handleUploadClick = () => {
