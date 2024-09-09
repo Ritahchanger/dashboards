@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --bg-color: rgb(250, 251, 251);
+  --pinkRed: #ff004f;
+  --white: #fff;
+  --black: #000;
+  --skyBlue: #0092ff;
+  --darkGray: #999;
+}
+*::-webkit-scrollbar {
+  width: 6px; /* Make the scrollbar thinner */
+}
+
+*::-webkit-scrollbar-track {
+  background: var(
+    --bg-color
+  ); /* Set the background color of the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--darkGray); /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Add rounded corners */
+  border: 2px solid var(--bg-color); /* Add padding around the scrollbar thumb */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--black); /* Darker color on hover */
+}
+
+/* Scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: var(--darkGray) var(--bg-color); /* Thumb and track colors */
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 0 2rem;
+}
+.hero-btn {
+  padding: 0.5rem 2.5rem;
+
+  border-radius: 30px;
+
+  border: none;
+
+  background: var(--pinkRed);
+
+  transition: all 0.5s;
+
+  color: var(--white);
+
+  cursor: pointer;
+}
+.hero-btn:hover {
+  background: var(--skyBlue);
+}
+.medium-header {
+  font-size: 1.2rem;
+  color: var(--skyBlue);
+  font-weight: 600;
+}
+
+.empty {
+  padding-top: 54px;
+}
+
+.row{
+
+  display:flex;
+
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.table-wrapper{
+
+  width:100%;
+
+
+}
+
+.table-wrapper table{
+
+  width:100%;
+}

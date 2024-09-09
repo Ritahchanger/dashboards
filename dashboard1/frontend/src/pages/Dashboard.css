@@ -1,0 +1,44 @@
+.dashboard .main {
+  width: calc(100% - 310px);
+  float: right;
+}
+
+.dashboard .balance-sheet {
+  margin-right: 2rem;
+
+  background: var(--white);
+  padding: 1rem;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  height: calc(100vh - 50px);
+
+  overflow-y: scroll;
+}
+
+.dashboard .balance-sheet table {
+  border-collapse: collapse;
+
+  margin-top: 3rem;
+}
+
+.dashboard .balance-sheet table tbody tr {
+  border-bottom: 1px solid var(--darkGray);
+}
+.dashboard .main .medium-header {
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .dashboard .main {
+    width: calc(100% - 260px);
+    float: right;
+  }
+}
+@media (max-width: 904px) {
+  .dashboard .main {
+    width: 100%;
+    float: right;
+    padding:0 1rem;  
+  }
+}

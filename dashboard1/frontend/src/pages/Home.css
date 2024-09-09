@@ -1,0 +1,170 @@
+.Home {
+  position: relative;
+
+  height: 100vh;
+
+  width: 100%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../Assets/images/download.webp");
+}
+.Home .home-nav .container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  width: 100%;
+
+  position: relative;
+}
+
+.Home .home-nav {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  position: fixed;
+
+  width: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  background: var(--white);
+
+  height: 50px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.Home .content {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 80%;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+
+  padding: 1rem;
+
+  border-radius: 10px;
+}
+
+.Home .content p {
+  color: var(--white);
+  line-height: 3rem;
+
+  font-size: 2.4rem;
+}
+
+.Home .home-nav li {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.Home .home-nav li a {
+  display: block;
+}
+
+.Home .home-nav button {
+  border: none;
+
+  padding: 0.4rem 1rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  height: 30px;
+
+  cursor: pointer;
+
+  background: var(--pinkRed);
+
+  color: var(--white);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.Home .home-nav button span {
+  margin-right: 1rem;
+
+  font-size: 1.2rem;
+
+  font-weight: 600;
+}
+
+.Home .home-nav li:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.Home ul {
+  display: flex;
+}
+
+.Home .logo a {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.Home .applications-settings {
+  position: absolute;
+
+  z-index: 99;
+
+  top: calc(100vh - 60px);
+
+  height: 50px;
+
+  width: 50px;
+
+  background: var(--skyBlue);
+
+  left: 2.5rem;
+
+  display: flex;
+
+  color: var(--white);
+
+  font-size: 1.6rem;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  border: 2px solid var(--pinkRed);
+}

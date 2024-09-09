@@ -1,0 +1,44 @@
+.overview .grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+}
+.overview .card {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  padding: 1.5rem;
+
+  background: var(--white);
+}
+
+.overview .card .row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+.overview .card .row .col:nth-child(1) p {
+  line-height: 2rem;
+  text-align: start;
+}
+
+.overview .col.icon-col span {
+  font-size: 1.4rem;
+}
+@media (max-width: 466px) {
+  .overview .grid {
+    display: grid;
+
+    grid-template-columns: repeat(1, 1fr);
+
+    gap: 10px;
+  }
+
+  .overview .card .row .col:nth-child(1) p {
+    line-height: 1.5rem;
+    text-align: start;
+  }
+}
