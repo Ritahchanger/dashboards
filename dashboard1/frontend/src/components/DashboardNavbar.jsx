@@ -37,7 +37,7 @@ const DashboardNavbar = () => {
       )}
       <div className="logo">
         <a href="#" className="logo-text">
-          Bankayo
+          fincore
         </a>
       </div>
 

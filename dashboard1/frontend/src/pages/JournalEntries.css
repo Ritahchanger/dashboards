@@ -1,0 +1,109 @@
+.dashboard .journal-header .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.dashboard .journal-header {
+  margin-top: 2rem;
+}
+
+.dashboard .journal-header .grid .input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  border: 1px solid var(--darkGray);
+  border-radius: 30px;
+}
+
+.dashboard .journal-header .grid .input-group input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 10px;
+}
+
+.dashboard .main.journal {
+  padding-right: 1rem;
+}
+
+.dashboard .main.journal .hero-btn {
+  margin-left: 1rem;
+}
+.dashboard .journal-container {
+  background: var(--white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  padding: 1rem;
+}
+.dashboard .journal-container .medium-header {
+  border-bottom: 1px solid var(--skyBlue);
+}
+
+.dashboard .journal-container .row.header {
+  margin-top: 1.5rem;
+}
+.dashboard .main .journal-container .hero-btn{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.dashboard .main .journal-container .entries{
+
+
+
+}
+
+.dashboard .main .journal-container .entries ul{
+
+  display:flex;
+
+  gap:10px;
+  float:right;
+
+  margin:2rem 0rem;
+
+} 
+
+.dashboard .main .journal-container .entries ul li button{
+  width:30px;
+  height:30px;
+  border:none;
+  background:var(--skyBlue);
+  color:var(--white);
+  cursor: pointer;
+}
+
+
+.dashboard .main .journal-container .table-wrapper{
+  margin-top:2rem;
+}
+
+.dashboard .main .journal-container .table-wrapper table thead{
+
+  border-bottom:1px solid var(--darkGray);
+
+}
+
+@media (max-width: 674px) {
+  .dashboard .journal-header .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+@media (max-width: 644px) {
+  .dashboard .journal-container .row.header {
+    flex-direction: column;
+    justify-content:start;
+    align-items:start;
+  }
+}
+@media (max-width: 460px) {
+  .dashboard .journal-header .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
