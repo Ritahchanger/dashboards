@@ -16,6 +16,10 @@
   overflow-y: scroll;
 }
 
+.dashboard .balance-sheet .medium-header {
+  border-bottom: 1px solid var(--skyBlue);
+}
+
 .dashboard .balance-sheet table {
   border-collapse: collapse;
 
@@ -39,6 +43,6 @@
   .dashboard .main {
     width: 100%;
     float: right;
-    padding:0 1rem;  
+    padding: 0 1rem;
   }
 }

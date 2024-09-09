@@ -14,6 +14,9 @@ const BalanceSheet = () => {
       <p className="empty"></p>
       <div className="main">
         <div className="balance-sheet">
+          <p className="medium-header">
+            BALANCE SHEET
+          </p>
           <div className="row">
             <div className="col">
               <p className="medium-header">MICROFINANCE NAME</p>
