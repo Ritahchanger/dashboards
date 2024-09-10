@@ -4,28 +4,12 @@ import DashboardSidebar from "../components/DashboardSidebar";
 import "./Dashboard.css";
 import "./JournalEntries.css";
 import { FaUpload, FaSearch, FaPrint } from "react-icons/fa";
-import { IoIosCloudDownload } from "react-icons/io";
-import { GrColumns } from "react-icons/gr";
-import { IoFilterSharp } from "react-icons/io5";
-import { faDisplay } from "@fortawesome/free-solid-svg-icons";
 
 import SearchModal from "../components/SearchModal";
 
+import EntriesComponent from "../components/EntriesComponent";
 
 const JournalEntries = () => {
- 
-  const [showFileInput, setShowFileInput] = useState(false);
-
-  const handlePrint = () => {
-    window.print(); 
-  };
-
-  const handleUploadClick = () => {
-    const inputFile = document.getElementById("input-file");
-
-    inputFile.click();
-  };
-
   return (
     <div className="dashboard">
       <DashboardNavbar />
@@ -71,70 +55,10 @@ const JournalEntries = () => {
               </div>
             </div>
           </div>
-          <div className="entries">
-            <div className="table-header">
-              <ul>
-                <li>
-                  <input
-                    type="file"
-                    style={{ display: "none" }}
-                    id="input-file"
-                  ></input>
-                  <button onClick={handleUploadClick}>
-                    <FaUpload />
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <FaSearch />
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <IoIosCloudDownload />
-                  </button>
-                </li>
-                <li>
-                  <button onClick={handlePrint}>
-                    <FaPrint />
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <GrColumns />
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <IoFilterSharp />
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div className="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <td>
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <td>tx Date</td>
-                    <td>Created Date</td>
-                    <td>Created By</td>
-                    <td>Entity</td>
-                    <td>Entry Type</td>
-                    <td>Account Name</td>
-                    <td>Txn ID</td>
-                    <td>Amount</td>
-                    <td>Action</td>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
+          <EntriesComponent />
         </div>
       </div>
-      <SearchModal/>
+      <SearchModal />
     </div>
   );
 };
