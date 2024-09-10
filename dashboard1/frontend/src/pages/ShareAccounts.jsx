@@ -5,6 +5,8 @@ import DashboardSidebar from "../components/DashboardSidebar";
 import "./Dashboard.css";
 
 import SearchModal from "../components/SearchModal";
+import PageHeaders from "../components/PageHeaders";
+import EntriesComponent from "../components/EntriesComponent";
 
 const ShareAccounts = () => {
   return (
@@ -12,10 +14,18 @@ const ShareAccounts = () => {
       <DashboardNavbar />
       <DashboardSidebar />
       <p className="empty"></p>
-      <div className="main">
-        <p className="medium-header">SHARE ACCOUNTS</p>
+      <div className="main journal">
+        <div className="journal-container">
+          <p className="medium-header">SHARE ACCOUNTS</p>
+          <PageHeaders
+            pageTitle={"All Share Accounts"}
+            pageWork={"Dashboard | Share accounts"}
+            mainAction={"Import share purchases"}
+          />
+          <EntriesComponent />
+        </div>
       </div>
-      <SearchModal/>
+      <SearchModal />
     </div>
   );
 };
