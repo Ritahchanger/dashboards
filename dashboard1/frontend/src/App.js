@@ -34,10 +34,11 @@ import NewLoanProductsList from "./pages/NewLoanProductList";
 
 import Branches from "./pages/Branches";
 
-import StandingInstructionsRunHistory from 
-"./pages/StandingInstructionsRunHistory";
+import StandingInstructionsRunHistory from "./pages/StandingInstructionsRunHistory";
 
 import ImportWIthdrawals from "./pages/ImportWithdrawals";
+
+import SingleCustomer from "./pages/SingleCustomer";
 
 const App = () => {
   return (
@@ -50,6 +51,7 @@ const App = () => {
         <Route path="/reports/income-statement" element={<IncomeStatement />} />
         <Route path="/fintec/journal-entries" element={<JournalEntries />} />
         <Route path="/fintec/customers/list" element={<CustomerList />} />
+        <Route path="/fintec/customers/list/:id" element={<SingleCustomer />} />
         <Route path="/fintec/customers/add" element={<AddCustomer />} />
         <Route path="/fintec/customers/import" element={<ImportCustomers />} />
         <Route path="/fintec/groups/list" element={<GroupsList />} />
@@ -74,8 +76,14 @@ const App = () => {
         />
         <Route path="/fintec/branches" element={<Branches />} />
 
-        <Route path="/fintec/savings-accounts/standing-instructions-history" element={<StandingInstructionsRunHistory />} />
-        <Route path="/fintec/savings-accounts/import-withdrawals" element={<ImportWIthdrawals/>} />
+        <Route
+          path="/fintec/savings-accounts/standing-instructions-history"
+          element={<StandingInstructionsRunHistory />}
+        />
+        <Route
+          path="/fintec/savings-accounts/import-withdrawals"
+          element={<ImportWIthdrawals />}
+        />
       </Routes>
     </BrowserRouter>
   );

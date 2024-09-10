@@ -175,17 +175,46 @@ table td .table-buttons button:nth-child(2) {
 
   position: relative;
 }
+.header-ul {
+  display: flex;
+  border-bottom: 2px solid var(--skyBlue);
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: center;
+}
+.header-ul li {
+  padding: 1rem 0rem;
+  position: relative;
+  cursor: pointer;
+  transition: All 0.5s;
+}
 
-.modal .modal-wrapper .modal-wrapper-container{
+.header-ul li:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--skyBlue);
+  bottom: 0;
+  left: 0;
+}
 
+.modal .modal-wrapper .modal-wrapper-container {
+  max-height: calc(100vh - 50px);
 
-  max-height: calc( 100vh - 50px );
+  width: 100%;
 
-  width:100%;
+  padding: 2rem;
 
-  padding:2rem;
-  
+  overflow: scroll;
+}
+.toggle-button {
+  cursor: pointer;
+  margin-left: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
 
-  overflow:scroll;
-
+.toggle-button.rotate {
+  transform: rotate(90deg);
 }

@@ -1,0 +1,20 @@
+.dashboard.single-user .grid.profile {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap:10px;
+
+  margin-top:2rem;
+
+
+}
+
+
+.dashboard.single-user .grid.profile  .col{
+
+    border:1px solid var(--darkGray);
+
+    padding:10px;
+
+}

@@ -4,9 +4,10 @@ import "./Dashboard.css";
 import { FaEdit } from "react-icons/fa";
 import { BiShow } from "react-icons/bi";
 
-import "./customers_List.css"
+import "./customers_List.css";
 
 import SearchModal from "../components/SearchModal";
+import { Link } from "react-router-dom";
 
 // Sample customer data
 const customers = [
@@ -79,7 +80,7 @@ const CustomerList = () => {
             </div>
           </div>
 
-          <ul className="customers-ul">
+          <ul className="header-ul">
             <li>All customers</li>
             <li>Active customers</li>
             <li>Inactive customers</li>
@@ -117,12 +118,18 @@ const CustomerList = () => {
                     <td>{customer.activationDate}</td>
                     <td>
                       <div className="table-buttons">
-                        <button>
-                          <FaEdit />
-                        </button>
-                        <button>
-                          <BiShow />
-                        </button>
+                        <Link>
+                          <button>
+                            <FaEdit />
+                          </button>
+                        </Link>
+                        <Link
+                          to={`/fintec/customers/list/${customer.accountNo}`}
+                        >
+                          <button>
+                            <BiShow />
+                          </button>
+                        </Link>
                       </div>
                     </td>
                   </tr>
@@ -132,7 +139,7 @@ const CustomerList = () => {
           </div>
         </div>
       </div>
-      <SearchModal/>
+      <SearchModal />
     </div>
   );
 };
