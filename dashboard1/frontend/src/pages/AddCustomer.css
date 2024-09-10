@@ -14,8 +14,6 @@
   gap: 10px;
 }
 
-
-
 .dashboard.add-customer .col .input-group {
   border: 1px solid var(--darkGray);
 
@@ -25,13 +23,18 @@
 }
 .dashboard.add-customer .row.header {
   border-bottom: 2px solid var(--skyBlue);
-  padding-bottom:2rem;
+  padding-bottom: 2rem;
 }
 
 .dashboard .add-customer-wrapper {
   margin-top: 3rem;
 }
 
+.dashboard.add-customer .add-customer-wrapper .col.steps {
+  border-right: 1px solid var(--darkGray);
+
+  padding-right: 1rem;
+}
 .dashboard.add-customer .add-customer-wrapper .col.steps .row .card p {
   text-align: start;
 }
@@ -82,9 +85,14 @@
   .dashboard.add-customer .add-customer-wrapper .grid {
     grid-template-columns: repeat(1, 1fr);
   }
+  .dashboard.add-customer .add-customer-wrapper .col.steps {
+    border-right: none;
+
+    padding-right: 0;
+  }
 }
-@media (max-width: 480px){
-    .dashboard.add-customer .col.form-inputs{
-        grid-template-columns:repeat(1,1fr);
-    }
+@media (max-width: 480px) {
+  .dashboard.add-customer .col.form-inputs {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
