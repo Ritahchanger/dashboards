@@ -72,3 +72,10 @@ border-radius:50%;
 
 
 }
+
+
+@media(max-width:616px){
+    .dashboard.single-user .grid.profile {
+        grid-template-columns:repeat(1,1fr);
+    }
+}
