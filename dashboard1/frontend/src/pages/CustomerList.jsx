@@ -4,6 +4,10 @@ import "./Dashboard.css";
 import { FaEdit } from "react-icons/fa";
 import { BiShow } from "react-icons/bi";
 
+import "./customers_List.css"
+
+import SearchModal from "../components/SearchModal";
+
 // Sample customer data
 const customers = [
   {
@@ -58,7 +62,7 @@ const customers = [
 
 const CustomerList = () => {
   return (
-    <div className="dashboard">
+    <div className="dashboard customers">
       <DashboardNavbar />
       <DashboardSidebar />
       <p className="empty"></p>
@@ -74,6 +78,14 @@ const CustomerList = () => {
               <button className="hero-btn">Onboard A New Customer</button>
             </div>
           </div>
+
+          <ul className="customers-ul">
+            <li>All customers</li>
+            <li>Active customers</li>
+            <li>Inactive customers</li>
+            <li>New customers</li>
+          </ul>
+
           <div className="table-wrapper">
             <table>
               <thead>
@@ -120,6 +132,7 @@ const CustomerList = () => {
           </div>
         </div>
       </div>
+      <SearchModal/>
     </div>
   );
 };

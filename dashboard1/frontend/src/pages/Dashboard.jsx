@@ -6,6 +6,8 @@ import DashboardOverview from "../components/DashboardOverview";
 
 import "./Dashboard.css";
 
+import SearchModal from "../components/SearchModal";
+
 const Dashboard = () => {
   return (
     <div className="dashboard">
@@ -16,6 +18,8 @@ const Dashboard = () => {
         <p className="medium-header">DASHBOARD</p>
         <DashboardOverview />
       </div>
+
+      <SearchModal />
     </div>
   );
 };

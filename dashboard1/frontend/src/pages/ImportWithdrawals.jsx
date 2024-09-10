@@ -4,6 +4,8 @@ import DashboardSidebar from "../components/DashboardSidebar";
 
 import "./Dashboard.css";
 
+import SearchModal from "../components/SearchModal";
+
 const ImportWIthdrawals = () => {
   return (
     <div className="dashboard">
@@ -11,11 +13,9 @@ const ImportWIthdrawals = () => {
       <DashboardSidebar />
       <p className="empty"></p>
       <div className="main">
-        <p className="medium-header">
-            IMPORT WITHDRAWALS
-        </p>
-
+        <p className="medium-header">IMPORT WITHDRAWALS</p>
       </div>
+      <SearchModal />
     </div>
   );
 };

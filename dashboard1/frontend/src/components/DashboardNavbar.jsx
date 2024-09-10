@@ -1,40 +1,45 @@
 import "./DashboardNavbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserShield } from "@fortawesome/free-solid-svg-icons";
-import { faUniversity } from "@fortawesome/free-solid-svg-icons";
-import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faInbox } from "@fortawesome/free-solid-svg-icons";
-import { faBell } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUserShield,
+  faUniversity,
+  faFileAlt,
+  faUser,
+  faInbox,
+  faBell,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-
 import { useSelector, useDispatch } from "react-redux";
-
 import { showNavbar, hideNavbar } from "../Redux/Features/NavbarSlice";
+import {
+  showSearchModal,
+  hideSearchModal,
+} from "../Redux/Features/SearchModalSlice";
 
 const DashboardNavbar = () => {
   const dispatch = useDispatch();
 
-  const handleShowNavbar = () => {
-    dispatch(showNavbar());
-  };
-  const handleHideNavbar = () => {
-    dispatch(hideNavbar());
+  const displayNavbar = useSelector((state) => state.navbar.displayNavbar);
+  const handleToggleNavbar = () => {
+    displayNavbar ? dispatch(hideNavbar()) : dispatch(showNavbar());
   };
 
-  const displayNavbar = useSelector((state) => state.navbar.displayNavbar);
+  const handleSearchInput = (event) => {
+    const query = event.target.value;
+    query ? dispatch(showSearchModal()) : dispatch(hideSearchModal());
+  };
+
   return (
-    <nav className={` navbar-dashboard `}>
-      {!displayNavbar ? (
-        <button className="menu-icon" onClick={handleShowNavbar}>
-          &#9776;
-        </button>
-      ) : (
-        <button className="menu-icon" onClick={handleHideNavbar}>
-          &times;
-        </button>
-      )}
+    <nav className="navbar-dashboard">
+      <button
+        className="menu-icon"
+        onClick={handleToggleNavbar}
+        aria-label={displayNavbar ? "Close Navbar" : "Open Navbar"}
+      >
+        {displayNavbar ? "×" : "☰"}
+      </button>
+
       <div className="logo">
         <a href="#" className="logo-text">
           fincore
@@ -43,43 +48,45 @@ const DashboardNavbar = () => {
 
       <div className="dashboard-navbar-icons">
         <div className="search-bar">
-          <input type="text" name="search" id="" placeholder="Search" />
+          <input
+            type="text"
+            name="search"
+            placeholder="Search"
+            onChange={handleSearchInput}
+          />
           <FaSearch />
         </div>
+
+        {/* Navigation icons */}
         <div className="navbar-ease-navigation">
           <ul>
             <li className="mobile">
-              <Link>
+              <Link to="#">
                 <FontAwesomeIcon icon={faUserShield} size="2x" />
               </Link>
             </li>
             <li className="mobile">
-              <Link >
-                {" "}
+              <Link to="#">
                 <FontAwesomeIcon icon={faUniversity} size="2x" />
               </Link>
             </li>
             <li className="mobile">
-              <Link>
-                {" "}
+              <Link to="#">
                 <FontAwesomeIcon icon={faFileAlt} size="2x" />
               </Link>
             </li>
             <li>
-              <Link>
-                {" "}
+              <Link to="#">
                 <FontAwesomeIcon icon={faUser} size="2x" />
               </Link>
             </li>
             <li>
-              <Link>
-                {" "}
+              <Link to="#">
                 <FontAwesomeIcon icon={faInbox} size="2x" />
               </Link>
             </li>
             <li>
-              <Link>
-                {" "}
+              <Link to="#">
                 <FontAwesomeIcon icon={faBell} size="2x" />
               </Link>
             </li>

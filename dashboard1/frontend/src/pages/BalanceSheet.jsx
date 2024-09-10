@@ -6,6 +6,8 @@ import DashboardOverview from "../components/DashboardOverview";
 
 import "./Dashboard.css";
 
+import SearchModal from "../components/SearchModal";
+
 const BalanceSheet = () => {
   return (
     <div className="dashboard">
@@ -107,6 +109,7 @@ const BalanceSheet = () => {
           </div>
         </div>
       </div>
+      <SearchModal/>
     </div>
   );
 };

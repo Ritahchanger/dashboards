@@ -4,6 +4,8 @@ import DashboardSidebar from "../components/DashboardSidebar";
 
 import "./Dashboard.css";
 
+import SearchModal from "../components/SearchModal";
+
 const Branches = () => {
   return (
     <div className="dashboard">
@@ -15,6 +17,7 @@ const Branches = () => {
             BRANCHES
         </p>
       </div>
+      <SearchModal/>
     </div>
   );
 };

@@ -1,0 +1,33 @@
+.modal.search{
+
+    display:none;
+
+}
+
+.modal.search.active{
+
+    display:flex;
+
+}
+
+.modal.search .close-icon {
+  position: absolute;
+
+  width: 30px;
+
+  height: 30px;
+
+  border: none;
+
+  position: absolute;
+
+  right: 0;
+
+  top: 0;
+
+  background: var(--pinkRed);
+
+  color: var(--white);
+
+  cursor: pointer;
+}

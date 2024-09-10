@@ -139,3 +139,53 @@ table td .table-buttons button:hover {
 table td .table-buttons button:nth-child(2) {
   margin-left: 10px;
 }
+
+.modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  height: 100vh;
+
+  z-index: 99;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.modal .modal-wrapper {
+  background: var(--white);
+
+  max-width: 1000px;
+
+  width: 94%;
+
+  position: relative;
+}
+
+.modal .modal-wrapper .modal-wrapper-container{
+
+
+  max-height: calc( 100vh - 50px );
+
+  width:100%;
+
+  padding:2rem;
+  
+
+  overflow:scroll;
+
+}

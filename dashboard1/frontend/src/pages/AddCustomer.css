@@ -1,0 +1,85 @@
+.dashboard.add-customer .add-customer-wrapper .grid {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr;
+
+  gap: 20px;
+}
+
+.dashboard.add-customer .col.form-inputs {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+
+
+.dashboard.add-customer .col .input-group {
+  border: 1px solid var(--darkGray);
+
+  border-radius: 30px;
+
+  height: 40px;
+}
+.dashboard.add-customer .row.header {
+  border-bottom: 2px solid var(--skyBlue);
+  padding-bottom:2rem;
+}
+
+.dashboard .add-customer-wrapper {
+  margin-top: 3rem;
+}
+
+.dashboard.add-customer .add-customer-wrapper .col.steps .row .card p {
+  text-align: start;
+}
+
+.dashboard.add-customer .add-customer-wrapper .col.steps .row {
+  justify-content: space-between;
+}
+
+.dashboard.add-customer .add-customer-wrapper .col.steps .row input {
+  flex-basis: 20%;
+}
+.dashboard.add-customer .add-customer-wrapper .col.steps .row .idno {
+  flex-basis: 15%;
+}
+.dashboard.add-customer .add-customer-wrapper .col.steps .row .card {
+  flex-basis: 63%;
+}
+.dashboard.add-customer .add-customer-wrapper .col.steps .row .card p {
+  text-align: end;
+}
+.dashboard.add-customer .col.form-inputs input,
+.dashboard.add-customer .col.form-inputs select {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  padding: 10px;
+
+  border-radius: 30px;
+}
+
+.dashboard.add-customer .col p {
+  text-align: start;
+}
+
+.dashboard.add-customer .add-customer-wrapper p {
+  text-align: start;
+}
+
+@media (max-width: 1150px) {
+  .dashboard.add-customer .col.form-inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1080px) {
+  .dashboard.add-customer .add-customer-wrapper .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

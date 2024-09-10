@@ -4,6 +4,8 @@ import DashboardSidebar from "../components/DashboardSidebar";
 
 import "./Dashboard.css";
 
+import SearchModal from "../components/SearchModal";
+
 const LoanProductsList = () => {
   return (
     <div className="dashboard">
@@ -15,6 +17,7 @@ const LoanProductsList = () => {
             LOAN PRODUCT LIST
         </p>
       </div>
+      <SearchModal/>
     </div>
   );
 };

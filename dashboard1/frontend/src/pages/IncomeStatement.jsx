@@ -4,6 +4,8 @@ import DashboardSidebar from "../components/DashboardSidebar";
 
 import "./Dashboard.css";
 
+import SearchModal from "../components/SearchModal";
+
 const IncomeStatement = () => {
   return (
     <div className="dashboard">
@@ -103,6 +105,7 @@ const IncomeStatement = () => {
           </div>
         </div>
       </div>
+      <SearchModal/>
     </div>
   );
 };

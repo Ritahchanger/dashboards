@@ -9,6 +9,9 @@ import { GrColumns } from "react-icons/gr";
 import { IoFilterSharp } from "react-icons/io5";
 import { faDisplay } from "@fortawesome/free-solid-svg-icons";
 
+import SearchModal from "../components/SearchModal";
+
+
 const JournalEntries = () => {
  
   const [showFileInput, setShowFileInput] = useState(false);
@@ -131,6 +134,7 @@ const JournalEntries = () => {
           </div>
         </div>
       </div>
+      <SearchModal/>
     </div>
   );
 };
