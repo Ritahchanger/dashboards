@@ -102,6 +102,7 @@
   .dashboard-sidebar {
    left:-200%;
    transition:all 0.5s;
+   z-index:99;
   }
   .dashboard-sidebar.active {
   left:0%;
