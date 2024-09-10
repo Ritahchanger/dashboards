@@ -248,6 +248,8 @@ table td .table-buttons button:nth-child(2) {
 }
 .dashboard  table thead{
   border-bottom:2px solid var(--skyBlue);
+  background:var(--skyBlue);
+  color:var(--white);
 }
 
 table thead tr{
