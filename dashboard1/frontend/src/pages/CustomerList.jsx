@@ -118,7 +118,9 @@ const CustomerList = () => {
                     <td>{customer.activationDate}</td>
                     <td>
                       <div className="table-buttons">
-                        <Link>
+                        <Link
+                          to={`/fintec/customers/list/${customer.accountNo}`}
+                        >
                           <button>
                             <FaEdit />
                           </button>

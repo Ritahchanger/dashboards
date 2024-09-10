@@ -1,12 +1,8 @@
-
-
-
-@media(max-width:698px){
-    .row.header .main-header{
-        flex-direction: column;
-    }
-    .row.header .col.client{
-        margin-top:3rem;
-    }
-    
+@media (max-width: 698px) {
+  .row.header .main-header {
+    flex-direction: column;
+  }
+  .row.header .col.client {
+    margin-top: 3rem;
+  }
 }
