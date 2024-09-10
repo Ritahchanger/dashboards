@@ -246,3 +246,15 @@ table td .table-buttons button:nth-child(2) {
   font-size:1.9rem;
 
 }
+.dashboard  table thead{
+  border-bottom:2px solid var(--skyBlue);
+}
+
+table thead tr{
+
+  border-bottom:2px solid var(--skyBlue);
+
+}
+table tbody tr{
+  border-bottom:1px solid var(--darkGray);
+}

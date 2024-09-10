@@ -6,7 +6,7 @@ import "./Dashboard.css";
 
 import SearchModal from "../components/SearchModal";
 
-import EntriesComponent from "../components/EntriesComponent";
+import SavingEntriesComponents from "../components/SavingsEntriesComponents";
 
 const SavingsAccounts = () => {
   return (
@@ -17,7 +17,7 @@ const SavingsAccounts = () => {
       <div className="main journal">
         <div className="journal-container">
           <p className="medium-header">SAVINGS ACCOUNT</p>
-          <EntriesComponent />
+          <SavingEntriesComponents />
         </div>
       </div>
       <SearchModal />

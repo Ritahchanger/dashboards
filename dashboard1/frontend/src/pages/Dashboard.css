@@ -44,9 +44,9 @@
   padding-right: 1rem;
 }
 
-.dashboard .balance-sheet table tbody tr {
-  border-bottom: 1px solid var(--darkGray);
-}
+
+
+/*  */
 .dashboard .main .medium-header {
   text-align: center;
 }
