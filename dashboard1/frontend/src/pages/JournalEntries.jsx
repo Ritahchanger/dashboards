@@ -3,7 +3,7 @@ import DashboardNavbar from "../components/DashboardNavbar";
 import DashboardSidebar from "../components/DashboardSidebar";
 import "./Dashboard.css";
 import "./JournalEntries.css";
-import { FaUpload, FaSearch, FaPrint } from "react-icons/fa";
+import { FaUpload } from "react-icons/fa";
 
 import SearchModal from "../components/SearchModal";
 
