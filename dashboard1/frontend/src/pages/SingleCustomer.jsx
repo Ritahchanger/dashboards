@@ -7,6 +7,15 @@ import "./SingleCustomer.css";
 import PageHeaders from "../components/PageHeaders";
 import { FaAngleRight } from "react-icons/fa";
 
+import ClientsInfo from "../components/ClientsInfo";
+import { FaUpload } from "react-icons/fa";
+
+import { FaCamera } from "react-icons/fa";
+
+import { FaDeleteLeft } from "react-icons/fa6";
+
+import { FaFileVideo } from "react-icons/fa";
+
 const SingleCustomer = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -59,42 +68,38 @@ const SingleCustomer = () => {
             <div className="col">
               <div className="profile-wrapper">
                 <div className="custom-profile">TC</div>
-                <p>test client</p>
+                <p className="sub-header">test client</p>
                 <p>Branch: Rosema</p>
+                <ul>
+                  <li>
+                    <button className="small-navigation-btn">
+                      <FaUpload />
+                    </button>
+                  </li>
+                  <li>
+                    <button className="small-navigation-btn">
+                      <FaCamera />
+                    </button>
+                  </li>
+                  <li>
+                    <button className="small-navigation-btn">
+                      <FaDeleteLeft />
+                    </button>
+                  </li>
+                  <li>
+                    <button className="small-navigation-btn">
+                      <FaFileVideo />
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col">
-              <p className="sub-header">Client Info</p>
-              <div className="row">
-                <p>Account No</p>
-                <p>0000079</p>
-              </div>
-              <div className="row">
-                <p>Account No</p>
-                <p>0000079</p>
-              </div>
-              <div className="row">
-                <p>Account No</p>
-                <p>0000079</p>
-              </div>
-              <div className="row">
-                <p>Account No</p>
-                <p>0000079</p>
-              </div>
-              <div className="row">
-                <p>Account No</p>
-                <p>0000079</p>
-              </div>
-              <div className="row">
-                <p>Account No</p>
-                <p>0000079</p>
-              </div>
-              <div className="row">
-                <p>Account No</p>
-                <p>0000079</p>
-              </div>
+              <ClientsInfo />
             </div>
-            <div className="col"></div>
+            <div className="col">
+              <ClientsInfo />
+            </div>
           </div>
         </div>
       </div>

@@ -215,6 +215,34 @@ table td .table-buttons button:nth-child(2) {
   transition: transform 0.3s ease-in-out;
 }
 
+.sub-header{
+  font-size:1.5rem;
+  color:var(--skyBlue);
+
+  font-weight:600;
+}
+
 .toggle-button.rotate {
   transform: rotate(90deg);
+}
+
+.small-navigation-btn{
+  width:30px;
+  border:none;
+  padding:10px;
+  height:30px;
+  color:var(--white);
+
+  background:var(--skyBlue);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  cursor: pointer;
+
+  font-size:1.9rem;
+
 }
