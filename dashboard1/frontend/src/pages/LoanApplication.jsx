@@ -4,7 +4,11 @@ import DashboardSidebar from "../components/DashboardSidebar";
 
 import "./Dashboard.css";
 
+import PageHeaders from "../components/PageHeaders";
+
 import SearchModal from "../components/SearchModal";
+
+
 
 const LoanApplication = () => {
   return (
