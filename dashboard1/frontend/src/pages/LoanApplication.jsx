@@ -8,8 +8,6 @@ import PageHeaders from "../components/PageHeaders";
 
 import SearchModal from "../components/SearchModal";
 
-
-
 const LoanApplication = () => {
   return (
     <div className="dashboard">
@@ -21,9 +19,9 @@ const LoanApplication = () => {
           <p className="medium-header">LOAN APPLICATION</p>
           <PageHeaders
             pageTitle={"All Tasks"}
-            pageWork={"Dashboard | Organization | Groups"}
-            mainAction={"Import Journal Entries"}
-            subAction={"Add Journal Entry"}
+            pageWork={"Dashboard | Management | Tasks"}
+            mainAction={"Import Loans"}
+           
           />
         </div>
       </div>
