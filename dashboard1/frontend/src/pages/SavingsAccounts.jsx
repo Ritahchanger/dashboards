@@ -6,14 +6,19 @@ import "./Dashboard.css";
 
 import SearchModal from "../components/SearchModal";
 
+import EntriesComponent from "../components/EntriesComponent";
+
 const SavingsAccounts = () => {
   return (
     <div className="dashboard">
       <DashboardNavbar />
       <DashboardSidebar />
       <p className="empty"></p>
-      <div className="main">
-        <p className="medium-header">SAVINGS ACCOUNT</p>
+      <div className="main journal">
+        <div className="journal-container">
+          <p className="medium-header">SAVINGS ACCOUNT</p>
+          <EntriesComponent />
+        </div>
       </div>
       <SearchModal />
     </div>
