@@ -3,79 +3,66 @@
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap:10px;
+  gap: 10px;
 
-  margin-top:2rem;
-
-
+  margin-top: 2rem;
 }
 
+.dashboard.single-user .grid.profile .col {
+  border: 1px solid var(--darkGray);
 
-.dashboard.single-user .grid.profile  .col{
-
-    border:1px solid var(--darkGray);
-
-    padding:10px;
-
+  padding: 10px;
 }
 
-.dashboard.single-user .grid.profile  .col .row{
+.dashboard.single-user .grid.profile .col .row {
+  padding: 1.5rem 0rem;
 
-    padding:1.5rem 0rem;
-
-    border-bottom:1px solid var(--darkGray);
-
+  border-bottom: 1px solid var(--darkGray);
 }
 
-.dashboard.single-user .grid.profile .profile-wrapper{
+.dashboard.single-user .grid.profile .profile-wrapper {
+  min-height: 400px;
 
-    min-height:400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  flex-direction: column;
 
-    flex-direction: column;
-
-    border-bottom:1px solid var(--darkGray);
-
+  border-bottom: 1px solid var(--darkGray);
 }
 
-.dashboard.single-user .grid.profile .profile-wrapper ul{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    margin-top:1.5rem;
+.dashboard.single-user .grid.profile .profile-wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.5rem;
 }
-.dashboard.single-user .grid.profile .profile-wrapper ul li{
-    
-}
-
-.dashboard.single-user .custom-profile{
-
-    height:150px;
-    width:150px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border:2px solid 
-var(--pinkRed);
-
-border-radius:50%;
-
-
-
-
+.dashboard.single-user .grid.profile .profile-wrapper ul li {
 }
 
+.dashboard.single-user .grid.profile .row p {
+  font-size: var(--mobile-font);
+}
 
-@media(max-width:616px){
-    .dashboard.single-user .grid.profile {
-        grid-template-columns:repeat(1,1fr);
-    }
+.dashboard.single-user .custom-profile {
+  height: 150px;
+  width: 150px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: 2px solid var(--pinkRed);
+
+  border-radius: 50%;
+}
+
+@media (max-width: 616px) {
+  .dashboard.single-user .grid.profile {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -1,0 +1,12 @@
+.product-description{
+    margin-top: 2rem;
+    padding:10px;
+
+    border:1px solid var(--darkGray);
+}
+
+
+.product-description textarea{
+    border:none;
+    outline:none;
+}
