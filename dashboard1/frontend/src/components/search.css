@@ -58,11 +58,19 @@
   margin-top:2rem;
 
 }
+.modal.search .modal-body .grid .inner-header{
+  display:flex;
+  align-items:center;
+  text-align:start;
+}
 
+.modal.search .modal-body .grid .inner-header span{
+  margin-right:10px;
+}
 
 .modal.search .modal-body .grid .col{
   border:2px solid var(--skyBlue);
-  padding:1rem;
+  padding:0.5rem;
 }
 .modal.search .modal-body .grid .col .medium-header{
   font-size:1rem;
@@ -73,4 +81,10 @@
 
   margin-bottom:1rem;
 
+}
+
+@media(max-width:470px){
+  .modal.search .modal-body .grid{
+    grid-template-columns: repeat(1,1fr);
+  }
 }
