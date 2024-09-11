@@ -19,6 +19,24 @@
   width: 6px; /* Make the scrollbar thinner */
 }
 
+/* To make the tabs stretch across the entire width */
+.ant-tabs-nav {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.ant-tabs-tab {
+  flex: 1;
+  text-align: center;
+}
+
+/* Optional: Style the toggle button to align with the tabs */
+.toggle-button {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+
 *::-webkit-scrollbar-track {
   background: var(
     --bg-color

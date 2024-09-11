@@ -83,7 +83,7 @@ const CustomerList = () => {
             </div>
           </div>
 
-          <Tabs defaultActiveKey="1">
+          <Tabs defaultActiveKey="1" className="tabs">
             <TabPane tab="All customers" key="1"></TabPane>
             <TabPane tab="Active customers" key="2"></TabPane>
             <TabPane tab="Inactive customers" key="3"></TabPane>

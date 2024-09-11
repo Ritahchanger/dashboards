@@ -8,13 +8,10 @@ import PageHeaders from "../components/PageHeaders";
 import { FaAngleRight } from "react-icons/fa";
 
 import ClientsInfo from "../components/ClientsInfo";
-import { FaUpload } from "react-icons/fa";
+import { FaUpload, FaCamera, FaFileVideo } from "react-icons/fa";
+import { Tabs, message } from "antd";
 
-import { FaCamera } from "react-icons/fa";
-
-import { FaDeleteLeft } from "react-icons/fa6";
-
-import { FaFileVideo } from "react-icons/fa";
+const { TabPane } = Tabs;
 
 const SingleCustomer = () => {
   const [showMore, setShowMore] = useState(false);
@@ -48,21 +45,38 @@ const SingleCustomer = () => {
             mainAction={"Edit Client Details"}
           />
 
-          <ul className="header-ul">
+          {/* <Tabs
+            defaultActiveKey="1"
+            style={{
+              display: "flex",
+
+              justifyContent: "space-between",
+            }}
+          >
             {!showMore &&
               listItems
-                .slice(0, 4)
-                .map((item, index) => <li key={index}>{item}</li>)}
+                .slice(0, 7)
+                .map((item, index) => (
+                  <TabPane tab={item} key={index + 1}></TabPane>
+                ))}
 
             {showMore &&
               listItems
-                .slice(4)
-                .map((item, index) => <li key={index + 4}>{item}</li>)}
+                .slice(7)
+                .map((item, index) => (
+                  <TabPane tab={item} key={index + 8}></TabPane>
+                ))}
+          </Tabs> */}
 
-            <span onClick={toggleShowMore} className="toggle-button">
-              <FaAngleRight />
-            </span>
-          </ul>
+          <Tabs defaultActiveKey="1">
+            {listItems.map((item, index) => (
+              <TabPane tab={item} key={index}></TabPane>
+            ))}
+          </Tabs>
+
+          {/* <span onClick={toggleShowMore} className="toggle-button">
+            <FaAngleRight />
+          </span> */}
 
           <div className="grid profile">
             <div className="col">
@@ -83,7 +97,7 @@ const SingleCustomer = () => {
                   </li>
                   <li>
                     <button className="small-navigation-btn">
-                      <FaDeleteLeft />
+                      <FaFileVideo />
                     </button>
                   </li>
                   <li>
