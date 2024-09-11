@@ -8,7 +8,7 @@ import SearchModal from "../components/SearchModal";
 
 import PageHeaders from "../components/PageHeaders";
 
-import "./NewLoanProduct.css"
+import "./NewLoanProduct.css";
 
 const NewLoanProductsList = () => {
   return (
@@ -69,7 +69,7 @@ const NewLoanProductsList = () => {
                     <input type="checkbox" />
                     <span class="slider round"></span>
                   </label>
-                  Include In Customer Loan Counter
+                  <p> Include In Customer Loan Counter</p>
                 </div>
                 <div className="input-group">
                   <input type="date" name="" id="" placeholder="Start date" />

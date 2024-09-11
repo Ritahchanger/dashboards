@@ -40,6 +40,10 @@ import ImportWIthdrawals from "./pages/ImportWithdrawals";
 
 import SingleCustomer from "./pages/SingleCustomer";
 
+import AddNewShareProduct from "./pages/AddNewShareProduct";
+
+import SharesProductList from "./pages/ShareProductList";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -83,6 +87,14 @@ const App = () => {
         <Route
           path="/fintec/savings-accounts/import-withdrawals"
           element={<ImportWIthdrawals />}
+        />
+        <Route
+          path="/fintec/shares/products/list"
+          element={<SharesProductList />}
+        />
+        <Route
+          path="/fintec/shares/products/add/new"
+          element={<AddNewShareProduct />}
         />
       </Routes>
     </BrowserRouter>

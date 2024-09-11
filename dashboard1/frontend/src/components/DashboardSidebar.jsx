@@ -373,6 +373,88 @@ const DashboardSidebar = () => {
               </ul>
             </div>
           </li>
+          <li>
+            <NavLink
+              to="#"
+              onClick={() => toggleDropdown("savings")}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              <p>
+                <span>
+                  <FontAwesomeIcon icon={faHandshake} />
+                </span>
+                Savings
+              </p>
+              <p>
+                <FaAngleRight />
+              </p>
+            </NavLink>
+            <div
+              className={`small-drop-down ${
+                openDropdown === "savings" ? "open" : ""
+              }`}
+            >
+              <ul>
+                <li>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    Savings Product List
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="#"
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    Add New Savings
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <NavLink
+              to="#"
+              onClick={() => toggleDropdown("share-savings")}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              <p>
+                <span>
+                  <FontAwesomeIcon icon={faHandshake} />
+                </span>
+                Shares Products
+              </p>
+              <p>
+                <FaAngleRight />
+              </p>
+            </NavLink>
+            <div
+              className={`small-drop-down ${
+                openDropdown === "share-savings" ? "open" : ""
+              }`}
+            >
+              <ul>
+                <li>
+                  <NavLink
+                    to="/fintec/shares/products/list"
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    Shares product List
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/fintec/shares/products/add/new"
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    Add New Share Product
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
 
