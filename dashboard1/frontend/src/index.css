@@ -81,7 +81,7 @@ a {
 .hero-btn {
   padding: 0.5rem 2.5rem;
 
-  border-radius: 30px;
+  border-radius: 5px;
 
   border: none;
 
@@ -91,6 +91,17 @@ a {
 
   color: var(--white);
 
+  cursor: pointer;
+}
+.action-btn {
+  padding: 0.5rem 2.5rem;
+
+  border-radius: 5px;
+
+  border: none;
+
+  background: var(--pinkRed);
+  color: var(--white);
   cursor: pointer;
 }
 .hero-btn:hover {
@@ -113,9 +124,9 @@ a {
 
   align-items: center;
 }
-p{
-  font-size:var(--mobile-font);
-  font-weight:500;
+p {
+  font-size: var(--mobile-font);
+  font-weight: 500;
 }
 .table-wrapper {
   width: 100%;
@@ -325,7 +336,10 @@ input:checked + .slider:before {
 
   cursor: pointer;
 
-  font-size: 1.9rem;
+  font-size: 2rem;
+}
+.small-navigation-btn span {
+  font-size: 1.4rem;
 }
 .dashboard table thead {
   border-bottom: 2px solid var(--skyBlue);
@@ -395,15 +409,13 @@ textarea {
 }
 
 .main-displayer .col:nth-child(1) {
-  justify-content:space-between;
-
+  justify-content: space-between;
 }
-.main-displayer .col:nth-child(1) .row p:nth-child(3){
-  flex-basis:60%;
- 
-  text-align:center;
-}
+.main-displayer .col:nth-child(1) .row p:nth-child(3) {
+  flex-basis: 60%;
 
+  text-align: center;
+}
 
 @media (max-width: 1064px) {
   .main-displayer {

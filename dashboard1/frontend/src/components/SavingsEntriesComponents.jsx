@@ -3,7 +3,7 @@ import { FaUpload, FaSearch, FaPrint } from "react-icons/fa";
 import { IoIosCloudDownload } from "react-icons/io";
 import { GrColumns } from "react-icons/gr";
 import { IoFilterSharp } from "react-icons/io5";
-
+import { BiShow } from "react-icons/bi";
 const SavingEntriesComponents = () => {
   const handlePrint = () => {
     window.print();
@@ -191,6 +191,7 @@ const SavingEntriesComponents = () => {
               <td>Status</td>
               <td>Account Balance</td>
               <td>Last Transaction Date</td>
+              <td>Actions</td>
             </tr>
           </thead>
           <tbody>
@@ -205,6 +206,13 @@ const SavingEntriesComponents = () => {
                 <td>{entry.status}</td>
                 <td>{entry.accountBalance}</td>
                 <td>{entry.lastTransactionDate}</td>
+                <td>
+                  <button className="small-navigation-btn">
+                    <span>
+                      <BiShow />
+                    </span>
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

@@ -18,7 +18,7 @@ const NewLoanProductsList = () => {
       <p className="empty"></p>
       <div className="main journal">
         <div className="journal-container">
-          <p className="medium-header">LOAN PRODUCT LIST</p>
+          <p className="medium-header">ADD NEW LOAN PRODUCT LIST</p>
           <PageHeaders
             pageTitle={"Create Loan product"}
             pageWork={"Dashboard | Loan Product"}

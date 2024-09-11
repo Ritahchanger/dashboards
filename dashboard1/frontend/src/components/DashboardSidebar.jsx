@@ -397,7 +397,7 @@ const DashboardSidebar = () => {
               <ul>
                 <li>
                   <NavLink
-                    to="#"
+                    to="/fintec/savings/product/add/list"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
                     Savings Product List
@@ -405,7 +405,7 @@ const DashboardSidebar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="#"
+                    to="/fintec/savings/product/add/new"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
                     Add New Savings

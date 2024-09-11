@@ -1,16 +1,14 @@
+import React, { useState } from "react";
 import DashboardNavbar from "../components/DashboardNavbar";
-
 import DashboardSidebar from "../components/DashboardSidebar";
-
 import "./Dashboard.css";
+import "./JournalEntries.css";
 
 import SearchModal from "../components/SearchModal";
 
-import PageHeaders from "../components/PageHeaders";
+import EntriesComponent from "../components/EntriesComponent";
 
-import BranchesEntriesComponent from "../components/BranchesEntriesComponent";
-
-const Branches = () => {
+const AddNewSavings = () => {
   return (
     <div className="dashboard">
       <DashboardNavbar />
@@ -18,14 +16,8 @@ const Branches = () => {
       <p className="empty"></p>
       <div className="main journal">
         <div className="journal-container">
-          <p className="medium-header">BRANCHES</p>
-          <PageHeaders
-            pageTitle={"All Branches"}
-            pageWork={"Dashboard | Organization | Branches "}
-            mainAction={"New Branch"}
-            subAction={"Input"}
-          />
-          <BranchesEntriesComponent />
+          <p className="medium-header">ADD NEW SAVINGS ACCOUNT</p>
+          <EntriesComponent />
         </div>
       </div>
       <SearchModal />
@@ -33,4 +25,4 @@ const Branches = () => {
   );
 };
 
-export default Branches;
+export default AddNewSavings;

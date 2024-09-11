@@ -1,5 +1,5 @@
 import { FaUpload } from "react-icons/fa";
-import "./PageHeaders.css"
+import "./PageHeaders.css";
 const PageHeaders = ({
   pageTitle,
   pageWork,
@@ -9,9 +9,10 @@ const PageHeaders = ({
 }) => {
   return (
     <div className="row header main-header">
-      <div className="col">
+      <div className="col left-col">
         <p>{pageTitle}</p>
         <p>{pageWork}</p>
+        {subAction && <button className="action-btn">{subAction}</button>}
       </div>
       <div className="col client">
         <div className="row">

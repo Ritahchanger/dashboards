@@ -6,3 +6,8 @@
     margin-top: 3rem;
   }
 }
+.row.header.main-header .col:nth-child(1) p{
+
+  margin-bottom:1rem;
+
+}

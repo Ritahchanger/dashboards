@@ -44,6 +44,11 @@ import AddNewShareProduct from "./pages/AddNewShareProduct";
 
 import SharesProductList from "./pages/ShareProductList";
 
+import SavingsProductList from "./pages/SavingsProductList";
+
+import AddNewSavings from "./pages/AddNewSavings";
+
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -95,6 +100,14 @@ const App = () => {
         <Route
           path="/fintec/shares/products/add/new"
           element={<AddNewShareProduct />}
+        />
+        <Route
+          path="/fintec/savings/product/add/list"
+          element={<SavingsProductList/>}
+        />
+        <Route
+          path="/fintec/savings/product/add/new"
+          element={<AddNewSavings/>}
         />
       </Routes>
     </BrowserRouter>

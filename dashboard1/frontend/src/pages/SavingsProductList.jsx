@@ -1,15 +1,17 @@
+import React, { useState } from "react";
 import DashboardNavbar from "../components/DashboardNavbar";
-
 import DashboardSidebar from "../components/DashboardSidebar";
-
 import "./Dashboard.css";
+import "./JournalEntries.css";
+import { FaUpload } from "react-icons/fa";
 
 import SearchModal from "../components/SearchModal";
 
-import PageHeaders from "../components/PageHeaders";
-import AllLoanProductsComponentEntries from "../components/AllLoanProductsComponentEntries";
+import SavingsProductsEntries from "../components/SavingsProducts";
 
-const LoanProductsList = () => {
+import PageHeaders from "../components/PageHeaders";
+
+const SavingsProductList = () => {
   return (
     <div className="dashboard">
       <DashboardNavbar />
@@ -17,13 +19,13 @@ const LoanProductsList = () => {
       <p className="empty"></p>
       <div className="main journal">
         <div className="journal-container">
-          <p className="medium-header">LOAN PRODUCT LIST</p>
+          <p className="medium-header">SAVINGS PRODUCT LIST</p>
           <PageHeaders
-            pageTitle={"All Loan Products"}
-            pageWork={"Dashboard | Products"}
-            mainAction={"New Loan Product"}
+            pageTitle={"All savings Products"}
+            pageWork={"Dashboard | Products | Savings Products"}
+            mainAction={"New Savings Product"}
           />
-          <AllLoanProductsComponentEntries/>
+          <SavingsProductsEntries />
         </div>
       </div>
       <SearchModal />
@@ -31,4 +33,4 @@ const LoanProductsList = () => {
   );
 };
 
-export default LoanProductsList;
+export default SavingsProductList;
