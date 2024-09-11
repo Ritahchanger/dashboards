@@ -367,7 +367,7 @@ const DashboardSidebar = () => {
                     to="/fintec/loan-products/new"
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
-                    New Loan Product
+                    Add New Loan Product
                   </NavLink>
                 </li>
               </ul>

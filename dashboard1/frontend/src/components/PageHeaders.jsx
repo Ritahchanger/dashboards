@@ -12,7 +12,6 @@ const PageHeaders = ({
       <div className="col">
         <p>{pageTitle}</p>
         <p>{pageWork}</p>
-        <button className="hero-btn">importName</button>
       </div>
       <div className="col client">
         <div className="row">

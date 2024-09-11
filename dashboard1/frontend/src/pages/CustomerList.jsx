@@ -9,6 +9,9 @@ import "./customers_List.css";
 import SearchModal from "../components/SearchModal";
 import { Link } from "react-router-dom";
 
+import { Tabs, message } from "antd";
+import TabPane from "antd/es/tabs/TabPane";
+
 // Sample customer data
 const customers = [
   {
@@ -80,12 +83,19 @@ const CustomerList = () => {
             </div>
           </div>
 
-          <ul className="header-ul">
+          <Tabs defaultActiveKey="1">
+            <TabPane tab="All customers" key="1"></TabPane>
+            <TabPane tab="Active customers" key="2"></TabPane>
+            <TabPane tab="Inactive customers" key="3"></TabPane>
+            <TabPane tab="New customers" key="4"></TabPane>
+          </Tabs>
+
+          {/* <ul className="header-ul">
             <li>All customers</li>
             <li>Active customers</li>
             <li>Inactive customers</li>
             <li>New customers</li>
-          </ul>
+          </ul> */}
 
           <div className="table-wrapper">
             <table>
