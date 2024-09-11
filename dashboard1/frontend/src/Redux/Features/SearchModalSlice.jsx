@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
 
-    displaySearchModal:false,
+    displaySearchModal:true,
 
 };
 
