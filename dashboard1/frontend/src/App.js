@@ -48,6 +48,7 @@ import SavingsProductList from "./pages/SavingsProductList";
 
 import AddNewSavings from "./pages/AddNewSavings";
 
+import Reports from "./pages/NavbarPages/Reports/Reports";
 
 const App = () => {
   return (
@@ -103,12 +104,14 @@ const App = () => {
         />
         <Route
           path="/fintec/savings/product/add/list"
-          element={<SavingsProductList/>}
+          element={<SavingsProductList />}
         />
         <Route
           path="/fintec/savings/product/add/new"
-          element={<AddNewSavings/>}
+          element={<AddNewSavings />}
         />
+
+        <Route path="/fintec/reports/list" element={<Reports />} />
       </Routes>
     </BrowserRouter>
   );

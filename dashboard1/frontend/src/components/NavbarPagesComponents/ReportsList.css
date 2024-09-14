@@ -1,0 +1,6 @@
+.entries.reports .table-buttons{
+    max-width:60px;
+}
+.entries.reports .table-buttons .small-navigation-btn span{
+    font-size:14px;
+}

@@ -124,7 +124,10 @@ const DashboardNavbar = () => {
               )}
             </li>
             <li className="mobile">
-              <Link to="#" onClick={() => handleDropDown("file")}>
+              <Link
+                to="/fintec/reports/list"
+                onClick={() => handleDropDown("file")}
+              >
                 <FontAwesomeIcon icon={faFileAlt} size="2x" />
               </Link>
             </li>

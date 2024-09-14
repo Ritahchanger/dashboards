@@ -32,7 +32,6 @@ const SavingsAccounts = () => {
               <TabPane tab={item} key={index}></TabPane>
             ))}
           </Tabs>
-
           <SavingEntriesComponents />
         </div>
       </div>
