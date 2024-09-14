@@ -50,6 +50,8 @@ import AddNewSavings from "./pages/AddNewSavings";
 
 import Reports from "./pages/NavbarPages/Reports/Reports";
 
+import SystemUsers from "./pages/NavbarPages/SystemUsers/SystemUsers";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -112,6 +114,7 @@ const App = () => {
         />
 
         <Route path="/fintec/reports/list" element={<Reports />} />
+        <Route path="/fintec/system/users" element={<SystemUsers />} />
       </Routes>
     </BrowserRouter>
   );
