@@ -52,6 +52,8 @@ import Reports from "./pages/NavbarPages/Reports/Reports";
 
 import SystemUsers from "./pages/NavbarPages/SystemUsers/SystemUsers";
 
+import Organization from "./pages/NavbarPages/Organisation/Organisation";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -115,6 +117,7 @@ const App = () => {
 
         <Route path="/fintec/reports/list" element={<Reports />} />
         <Route path="/fintec/system/users" element={<SystemUsers />} />
+        <Route path="/fintec/admin/organization" element={<Organization />} />
       </Routes>
     </BrowserRouter>
   );
