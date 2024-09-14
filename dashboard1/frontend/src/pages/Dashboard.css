@@ -44,7 +44,9 @@
   padding-right: 1rem;
 }
 
-
+.dashboard .customers-sidebar{
+  position:absolute;
+}
 
 /*  */
 .dashboard .main .medium-header {

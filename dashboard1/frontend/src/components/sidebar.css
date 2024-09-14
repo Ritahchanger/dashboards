@@ -35,15 +35,21 @@
 .dashboard-sidebar li a {
   display: flex;
 
-  padding: 0.8rem;
+  padding: 1rem;
 
-  border-bottom: 1px solid var(--darkGray);
+  border-bottom: 1px solid var(--pinkRed);
 
   justify-content: space-between;
 
   transition: all 0.5s;
   font-size: var(--mobile-font);
   font-weight: 500;
+
+  color: #555;
+}
+.dashboard-sidebar li a:hover {
+  background: var(--pinkRed);
+  color: var(--white);
 }
 /* 
 .dashboard-sidebar li a:hover {

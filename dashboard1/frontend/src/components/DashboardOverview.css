@@ -25,9 +25,32 @@
   text-align: start;
 }
 
+.overview .card .row .col .medium-header{
+  font-size:2.5rem;
+}
+
 .overview .col.icon-col span {
   font-size: 1.4rem;
 }
+
+.overview .overview .grid .card .medium-header{
+
+  font-size:"2rem";
+
+  margin:1rem 0rem;
+  
+
+}
+
+.overview .overview .grid .card .card-title{
+
+  line-height:1.5rem;
+
+  font-size:2rem;
+
+}
+
+
 @media (max-width: 466px) {
   .overview .grid {
     display: grid;

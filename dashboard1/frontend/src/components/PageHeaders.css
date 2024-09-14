@@ -6,8 +6,26 @@
     margin-top: 3rem;
   }
 }
-.row.header.main-header .col:nth-child(1) p{
+/* .row.header.main-header .col:nth-child(1) p{
 
   margin-bottom:1rem;
 
+} */
+.row.header.main-header .col.client .row{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+.row.header.main-header{
+
+  margin-bottom:2rem;
+
+}
+
+.row.header.main-header .col.client .row .col p{
+  margin-right:1rem;
 }

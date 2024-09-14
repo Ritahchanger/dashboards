@@ -122,7 +122,7 @@ const DashboardOverview = () => {
             <div className="row">
               <div className="col">
                 <p className="card-title">{customer.name}</p>
-                <p className="medium-header">{customer.no}</p>
+                <p className="medium-header"  >{customer.no}</p>
 
                 {customer.loans !== undefined && (
                   <p>{`Loans: ${customer.loans}`}</p>
