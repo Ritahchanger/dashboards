@@ -24,7 +24,6 @@
   position: relative;
 }
 
-
 .navbar-dashboard .menu-icon {
   border: none;
   height: 30px;
@@ -114,8 +113,8 @@
 .navbar-dashboard .customers-sidebar .customer-main {
   margin-top: 1rem;
 }
-.navbar-dashboard .navbar-ease-navigation ul li:hover{
-  background:var(--skyBlue);
+.navbar-dashboard .navbar-ease-navigation ul li:hover {
+  background: var(--skyBlue);
 }
 .navbar-dashboard .navbar-ease-navigation ul li a {
   display: block;
@@ -131,6 +130,12 @@
 
 .navbar-dashboard .navbar-ease-navigation .mobile {
   position: relative;
+}
+.navbar-dashboard .customer-number {
+  font-size: 11px;
+  line-height: 1.3rem;
+  letter-spacing: 1px;
+  color:gray;
 }
 .navbar-dashboard .navbar-ease-navigation .mobile .drop-down-menu {
   position: absolute;

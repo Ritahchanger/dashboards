@@ -17,6 +17,7 @@ import {
   hideSearchModal,
 } from "../Redux/Features/SearchModalSlice";
 import { useState } from "react";
+import CustomersSidebarData from "./CustomersSidebarData";
 
 const DashboardNavbar = () => {
   const dispatch = useDispatch();
@@ -143,88 +144,7 @@ const DashboardNavbar = () => {
                     <FaSearch />
                   </span>
                 </div>
-                <div className="customer-main">
-                  <div className="row">
-                    <div className="col">
-                      <div className="profile-image">TC</div>
-                      <div className="customer-details">
-                        <p>Test client</p>
-                        <p>834738534832492</p>
-                      </div>
-                    </div>
-                    <p>5346734821</p>
-                  </div>
-                  <div className="row">
-                    <div className="col">
-                      <div className="profile-image">TC</div>
-                      <div className="customer-details">
-                        <p>Test client</p>
-                        <p>834738534832492</p>
-                      </div>
-                    </div>
-                    <p>5346734821</p>
-                  </div>
-                  <div className="row">
-                    <div className="col">
-                      <div className="profile-image">TC</div>
-                      <div className="customer-details">
-                        <p>Test client</p>
-                        <p>834738534832492</p>
-                      </div>
-                    </div>
-                    <p>5346734821</p>
-                  </div>
-                  <div className="row">
-                    <div className="col">
-                      <div className="profile-image">TC</div>
-                      <div className="customer-details">
-                        <p>Test client</p>
-                        <p>834738534832492</p>
-                      </div>
-                    </div>
-                    <p>5346734821</p>
-                  </div>
-                  <div className="row">
-                    <div className="col">
-                      <div className="profile-image">TC</div>
-                      <div className="customer-details">
-                        <p>Test client</p>
-                        <p>834738534832492</p>
-                      </div>
-                    </div>
-                    <p>5346734821</p>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
-                    </div>
-                  </div>
-                  <p>5346734821</p>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
-                    </div>
-                  </div>
-                  <p>5346734821</p>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
-                    </div>
-                  </div>
-                  <p>5346734821</p>
-                </div>
+                <CustomersSidebarData />
               </div>
             </li>
             <li>
