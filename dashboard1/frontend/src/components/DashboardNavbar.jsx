@@ -21,6 +21,8 @@ import { useState } from "react";
 const DashboardNavbar = () => {
   const dispatch = useDispatch();
 
+  const [customerSidebar, setCustomerSidebar] = useState(false);
+
   const displayNavbar = useSelector((state) => state.navbar.displayNavbar);
   const handleToggleNavbar = () => {
     displayNavbar ? dispatch(hideNavbar()) : dispatch(showNavbar());
@@ -35,6 +37,10 @@ const DashboardNavbar = () => {
 
   const handleDropDown = (dropdown) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
+
+  const handleCustomerSidebar = () => {
+    setCustomerSidebar((prev) => !prev);
   };
 
   return (
@@ -121,64 +127,73 @@ const DashboardNavbar = () => {
                 <FontAwesomeIcon icon={faFileAlt} size="2x" />
               </Link>
             </li>
-            <li className="customers-drop-down">
+            <li className="customers-drop-down" onClick={handleCustomerSidebar}>
               <Link to="#">
                 <FontAwesomeIcon icon={faUser} size="2x" />
               </Link>
-              <div className="customers-sidebar">
+              <div
+                className={`customers-sidebar ${
+                  customerSidebar ? "active" : null
+                }`}
+              >
                 <div className="customer-sidebar-header"></div>
                 <div className="input-group">
                   <input type="text" placeholder="Search Names, Acc Numbers" />
+                  <span>
+                    <FaSearch />
+                  </span>
                 </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
+                <div className="customer-main">
+                  <div className="row">
+                    <div className="col">
+                      <div className="profile-image">TC</div>
+                      <div className="customer-details">
+                        <p>Test client</p>
+                        <p>834738534832492</p>
+                      </div>
                     </div>
+                    <p>5346734821</p>
                   </div>
-                  <p>5346734821</p>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
+                  <div className="row">
+                    <div className="col">
+                      <div className="profile-image">TC</div>
+                      <div className="customer-details">
+                        <p>Test client</p>
+                        <p>834738534832492</p>
+                      </div>
                     </div>
+                    <p>5346734821</p>
                   </div>
-                  <p>5346734821</p>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
+                  <div className="row">
+                    <div className="col">
+                      <div className="profile-image">TC</div>
+                      <div className="customer-details">
+                        <p>Test client</p>
+                        <p>834738534832492</p>
+                      </div>
                     </div>
+                    <p>5346734821</p>
                   </div>
-                  <p>5346734821</p>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
+                  <div className="row">
+                    <div className="col">
+                      <div className="profile-image">TC</div>
+                      <div className="customer-details">
+                        <p>Test client</p>
+                        <p>834738534832492</p>
+                      </div>
                     </div>
+                    <p>5346734821</p>
                   </div>
-                  <p>5346734821</p>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className="profile-image">TC</div>
-                    <div className="customer-details">
-                      <p>Test client</p>
-                      <p>834738534832492</p>
+                  <div className="row">
+                    <div className="col">
+                      <div className="profile-image">TC</div>
+                      <div className="customer-details">
+                        <p>Test client</p>
+                        <p>834738534832492</p>
+                      </div>
                     </div>
+                    <p>5346734821</p>
                   </div>
-                  <p>5346734821</p>
                 </div>
                 <div className="row">
                   <div className="col">

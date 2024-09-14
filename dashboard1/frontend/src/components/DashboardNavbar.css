@@ -20,9 +20,10 @@
 
   background: var(--white);
 }
-.navbar-dashboard ul li{
-  position:relative;
+.navbar-dashboard ul li {
+  position: relative;
 }
+
 
 .navbar-dashboard .menu-icon {
   border: none;
@@ -62,18 +63,60 @@
   border-radius: 50%;
 }
 
-.navbar-dashboard .customers-sidebar{
-  position:absolute;
-  z-index:99;
-  background:var(--white);
-  top:125%;
-  padding:1rem;
-  box-shadow:0 0 5px rgba(0,0,0,0.5);
-  height:calc(100vh - 50px)
+.navbar-dashboard .customers-sidebar {
+  position: absolute;
+  z-index: 99;
+  background: var(--white);
+  top: 125%;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  display: none;
 }
-
-
-
+.navbar-dashboard .customers-sidebar.active {
+  display: initial;
+}
+.navbar-dashboard .customers-sidebar .col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-dashboard .customers-sidebar .row {
+  margin-bottom: 1.5rem;
+}
+.navbar-dashboard .customers-sidebar .col .profile-image {
+  height: 40px;
+  width: 40px;
+  background: green;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+}
+.navbar-dashboard .customers-sidebar .input-group input {
+  border: none;
+  outline: none;
+}
+.navbar-dashboard .customers-sidebar .input-group {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--darkGray);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.navbar-dashboard .customers-sidebar .customer-main {
+  margin-top: 1rem;
+}
+.navbar-dashboard .navbar-ease-navigation ul li:hover{
+  background:var(--skyBlue);
+}
 .navbar-dashboard .navbar-ease-navigation ul li a {
   display: block;
   font-size: 10px;
@@ -111,7 +154,6 @@
   border-radius: 0%;
   cursor: pointer;
   background: transparent;
-
 }
 
 .navbar-dashboard .navbar-ease-navigation .mobile .drop-down-menu ul li a {
