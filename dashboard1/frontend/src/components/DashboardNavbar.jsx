@@ -111,7 +111,7 @@ const DashboardNavbar = () => {
                 <div className="drop-down-menu">
                   <ul>
                     <li>
-                      <Link to="#">Clients</Link>
+                      <Link to="/fintec/customers/list">Clients</Link>
                     </li>
                     <li>
                       <Link to="#">Groups</Link>
