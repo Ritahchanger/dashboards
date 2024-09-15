@@ -116,7 +116,7 @@ const DashboardNavbar = () => {
                       <Link to="/fintec/customers/list">Clients</Link>
                     </li>
                     <li>
-                      <Link to="#">Groups</Link>
+                      <Link to="/fintec/groups/list">Groups</Link>
                     </li>
                     <li>
                       <Link to="#">Centers</Link>
