@@ -16,13 +16,14 @@ import {
   showSearchModal,
   hideSearchModal,
 } from "../Redux/Features/SearchModalSlice";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import CustomersSidebarData from "./CustomersSidebarData";
 
 const DashboardNavbar = () => {
   const dispatch = useDispatch();
 
   const [customerSidebar, setCustomerSidebar] = useState(false);
+  const customerSidebarRef = useRef(null); // Ref to the customer sidebar
 
   const displayNavbar = useSelector((state) => state.navbar.displayNavbar);
   const handleToggleNavbar = () => {
@@ -43,6 +44,30 @@ const DashboardNavbar = () => {
   const handleCustomerSidebar = () => {
     setCustomerSidebar((prev) => !prev);
   };
+
+  const handleClickOutside = (event) => {
+    if (
+      customerSidebarRef.current &&
+      !customerSidebarRef.current.contains(event.target)
+    ) {
+      setCustomerSidebar(false);
+    }
+  };
+
+  useEffect(() => {
+    if (customerSidebar) {
+      // Add event listener when sidebar is open
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      // Remove event listener when sidebar is closed
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      // Clean up the event listener on unmount
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [customerSidebar]);
 
   return (
     <nav className="navbar-dashboard">
@@ -138,8 +163,9 @@ const DashboardNavbar = () => {
                 <FontAwesomeIcon icon={faUser} size="2x" />
               </Link>
               <div
+                ref={customerSidebarRef} // Add ref to sidebar
                 className={`customers-sidebar ${
-                  customerSidebar ? "active" : null
+                  customerSidebar ? "active" : ""
                 }`}
               >
                 <div className="customer-sidebar-header"></div>
@@ -157,10 +183,11 @@ const DashboardNavbar = () => {
                 <FontAwesomeIcon icon={faInbox} size="2x" />
               </Link>
             </li>
-            <li>
+            <li className="notification">
               <Link to="#">
                 <FontAwesomeIcon icon={faBell} size="2x" />
               </Link>
+              <span className="notification-bar">12</span>
             </li>
           </ul>
         </div>
