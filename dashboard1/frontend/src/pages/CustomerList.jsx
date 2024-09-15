@@ -9,7 +9,7 @@ import "./customers_List.css";
 import SearchModal from "../components/SearchModal";
 import { Link } from "react-router-dom";
 
-import { Tabs, message } from "antd";
+import { Tabs } from "antd";
 import TabPane from "antd/es/tabs/TabPane";
 
 // Sample customer data
