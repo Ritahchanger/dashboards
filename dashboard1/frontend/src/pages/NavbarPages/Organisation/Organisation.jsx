@@ -16,7 +16,7 @@ const Organization = () => {
         <div className="journal-container">
           <p className="medium-header">ORGANIZATION</p>
           <PageHeaders
-            pageTitle={"All Organization"}
+            pageTitle={"Organization"}
             pageWork={"Dashboard | Admin"}
             mainAction={"Download Template"}
             importName={"View All Organization"}

@@ -4,8 +4,7 @@ import DashboardSidebar from "../../../components/DashboardSidebar";
 import "../../Dashboard.css";
 import SearchModal from "../../../components/SearchModal";
 import PageHeaders from "../../../components/PageHeaders";
-import OrganizationCards from "../../../components/NavbarPagesComponents/OrganisationCards";
-
+import SystemCards from "../../../components/NavbarPagesComponents/SystemCards";
 const System = () => {
   return (
     <div className="dashboard">
@@ -16,12 +15,12 @@ const System = () => {
         <div className="journal-container">
           <p className="medium-header">SYSTEM</p>
           <PageHeaders
-            pageTitle={"All System"}
+            pageTitle={"System"}
             pageWork={"Dashboard | Admin"}
             mainAction={"Download Template"}
             importName={"View All System"}
           />
-          <OrganizationCards />
+          <SystemCards />
         </div>
       </div>
       <SearchModal />

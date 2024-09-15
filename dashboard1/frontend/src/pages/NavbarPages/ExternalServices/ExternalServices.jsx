@@ -4,7 +4,7 @@ import DashboardSidebar from "../../../components/DashboardSidebar";
 import "../../Dashboard.css";
 import SearchModal from "../../../components/SearchModal";
 import PageHeaders from "../../../components/PageHeaders";
-import OrganizationCards from "../../../components/NavbarPagesComponents/OrganisationCards";
+import ExternalServicesCards from "../../../components/NavbarPagesComponents/ExternalServicesCards";
 
 const ExternalServices = () => {
   return (
@@ -16,12 +16,12 @@ const ExternalServices = () => {
         <div className="journal-container">
           <p className="medium-header">EXTERNAL SERVICES</p>
           <PageHeaders
-            pageTitle={"All ExternalServices"}
+            pageTitle={"External Services"}
             pageWork={"Dashboard | Admin"}
             mainAction={"Download Template"}
             importName={"View All ExternalServices"}
           />
-          <OrganizationCards />
+          <ExternalServicesCards />
         </div>
       </div>
       <SearchModal />

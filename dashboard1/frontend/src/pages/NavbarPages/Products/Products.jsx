@@ -4,7 +4,7 @@ import DashboardSidebar from "../../../components/DashboardSidebar";
 import "../../Dashboard.css";
 import SearchModal from "../../../components/SearchModal";
 import PageHeaders from "../../../components/PageHeaders";
-import OrganizationCards from "../../../components/NavbarPagesComponents/OrganisationCards";
+import ProductsCards from "../../../components/NavbarPagesComponents/ProductsCards";
 
 const Products = () => {
   return (
@@ -16,12 +16,12 @@ const Products = () => {
         <div className="journal-container">
           <p className="medium-header">PRODUCTS</p>
           <PageHeaders
-            pageTitle={"All Products"}
+            pageTitle={"Products"}
             pageWork={"Dashboard | Admin"}
             mainAction={"Download Template"}
             importName={"View All Products"}
           />
-          <OrganizationCards />
+          <ProductsCards />
         </div>
       </div>
       <SearchModal />
