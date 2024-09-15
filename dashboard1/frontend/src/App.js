@@ -54,6 +54,14 @@ import SystemUsers from "./pages/NavbarPages/SystemUsers/SystemUsers";
 
 import Organization from "./pages/NavbarPages/Organisation/Organisation";
 
+import System from "./pages/NavbarPages/System/System";
+
+import Products from "./pages/NavbarPages/Products/Products";
+
+import ExternalServices from "./pages/NavbarPages/ExternalServices/ExternalServices";
+
+import BulkImports from "./pages/NavbarPages/BulkImports/BuilkImports";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -118,6 +126,16 @@ const App = () => {
         <Route path="/fintec/reports/list" element={<Reports />} />
         <Route path="/fintec/system/users" element={<SystemUsers />} />
         <Route path="/fintec/admin/organization" element={<Organization />} />
+        <Route path="/fintec/admin/system" element={<System />} />
+        <Route path="/fintec/admin/products" element={<Products />} />
+        <Route
+          path="/fintec/admin/externalservices"
+          element={<ExternalServices />}
+        />
+        <Route
+          path="/fintec/admin/bulkimport"
+          element={<BulkImports/>}
+        />
       </Routes>
     </BrowserRouter>
   );

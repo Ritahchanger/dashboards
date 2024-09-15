@@ -88,16 +88,18 @@ const DashboardNavbar = () => {
                       <Link to="/fintec/admin/organization">Organization</Link>
                     </li>
                     <li>
-                      <Link to="#">System</Link>
+                      <Link to="/fintec/admin/system">System</Link>
                     </li>
                     <li>
-                      <Link to="#">Products</Link>
+                      <Link to="/fintec/admin/products">Products</Link>
                     </li>
                     <li>
-                      <Link to="#">External Services</Link>
+                      <Link to="/fintec/admin/externalservices">
+                        External Services
+                      </Link>
                     </li>
                     <li>
-                      <Link to="#">Bulk import</Link>
+                      <Link to="/fintec/admin/bulkimport">Bulk import</Link>
                     </li>
                   </ul>
                 </div>

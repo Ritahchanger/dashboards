@@ -4,9 +4,9 @@ import DashboardSidebar from "../../../components/DashboardSidebar";
 import "../../Dashboard.css";
 import SearchModal from "../../../components/SearchModal";
 import PageHeaders from "../../../components/PageHeaders";
-import SystemUserList from "../../../components/NavbarPagesComponents/SystemUsersList";
+import OrganizationCards from "../../../components/NavbarPagesComponents/OrganisationCards";
 
-const SystemUsers = () => {
+const ExternalServices = () => {
   return (
     <div className="dashboard">
       <DashboardNavbar />
@@ -14,14 +14,14 @@ const SystemUsers = () => {
       <p className="empty"></p>
       <div className="main journal">
         <div className="journal-container">
-          <p className="medium-header">SYSTEM USERS </p>
+          <p className="medium-header">EXTERNAL SERVICES</p>
           <PageHeaders
-            pageTitle={"All SystemUsers"}
-            pageWork={"Dashboard | System Users"}
+            pageTitle={"All ExternalServices"}
+            pageWork={"Dashboard | Admin"}
             mainAction={"Download Template"}
-            importName={"View All SystemUsers"}
+            importName={"View All ExternalServices"}
           />
-          <SystemUserList />
+          <OrganizationCards />
         </div>
       </div>
       <SearchModal />
@@ -29,4 +29,4 @@ const SystemUsers = () => {
   );
 };
 
-export default SystemUsers;
+export default ExternalServices;
