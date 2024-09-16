@@ -18,16 +18,36 @@ import {
 } from "../Redux/Features/SearchModalSlice";
 import { useState, useEffect, useRef } from "react";
 import CustomersSidebarData from "./CustomersSidebarData";
+import NotificationsData from "./NavbarPagesComponents/NotificationsData";
 
 const DashboardNavbar = () => {
   const dispatch = useDispatch();
 
   const [customerSidebar, setCustomerSidebar] = useState(false);
-  const customerSidebarRef = useRef(null); // Ref to the customer sidebar
+  const [notificationSidebar, setNotificationSidebar] = useState(false);
+
+  const customerSidebarRef = useRef(null);
+  const notificationSidebarRef = useRef(null);
 
   const displayNavbar = useSelector((state) => state.navbar.displayNavbar);
   const handleToggleNavbar = () => {
     displayNavbar ? dispatch(hideNavbar()) : dispatch(showNavbar());
+  };
+
+  const handleNotificationSidebar = () => {
+    setNotificationSidebar((prev) => !prev);
+    // Ensure customer sidebar is closed
+    if (!notificationSidebar) {
+      setCustomerSidebar(false);
+    }
+  };
+
+  const handleCustomerSidebar = () => {
+    setCustomerSidebar((prev) => !prev);
+    // Ensure notification sidebar is closed
+    if (!customerSidebar) {
+      setNotificationSidebar(false);
+    }
   };
 
   const handleSearchInput = (event) => {
@@ -41,33 +61,34 @@ const DashboardNavbar = () => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
-  const handleCustomerSidebar = () => {
-    setCustomerSidebar((prev) => !prev);
-  };
-
   const handleClickOutside = (event) => {
+    // Check if click is outside the customer sidebar
     if (
       customerSidebarRef.current &&
       !customerSidebarRef.current.contains(event.target)
     ) {
       setCustomerSidebar(false);
     }
+    // Check if click is outside the notification sidebar
+    if (
+      notificationSidebarRef.current &&
+      !notificationSidebarRef.current.contains(event.target)
+    ) {
+      setNotificationSidebar(false);
+    }
   };
 
   useEffect(() => {
-    if (customerSidebar) {
-      // Add event listener when sidebar is open
+    if (customerSidebar || notificationSidebar) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
-      // Remove event listener when sidebar is closed
       document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      // Clean up the event listener on unmount
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [customerSidebar]);
+  }, [customerSidebar, notificationSidebar]);
 
   return (
     <nav className="navbar-dashboard">
@@ -183,11 +204,19 @@ const DashboardNavbar = () => {
                 <FontAwesomeIcon icon={faInbox} size="2x" />
               </Link>
             </li>
-            <li className="notification">
+            <li className="notification" onClick={handleNotificationSidebar}>
               <Link to="#">
                 <FontAwesomeIcon icon={faBell} size="2x" />
               </Link>
               <span className="notification-bar">12</span>
+              <div
+                ref={notificationSidebarRef} // Add ref to notification sidebar
+                className={`notifications-sidebar ${
+                  notificationSidebar ? "active" : ""
+                }`}
+              >
+                <NotificationsData />
+              </div>
             </li>
           </ul>
         </div>
