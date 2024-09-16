@@ -369,7 +369,27 @@ table tbody tr {
 .main-displayer .col:nth-child(2) {
   flex-basis: 55%;
 }
+.close-icon {
+  position: absolute;
 
+  width: 30px;
+
+  height: 30px;
+
+  border: none;
+
+  position: absolute;
+
+  right: 0;
+
+  top: 0;
+
+  background: var(--pinkRed);
+
+  color: var(--white);
+
+  cursor: pointer;
+}
 .main-displayer label {
   font-size: var(--mobile-font);
 }

@@ -8,6 +8,7 @@ import DashboardSidebar from "../../../components/DashboardSidebar";
 import PageHeaders from "../../../components/PageHeaders";
 
 import ListedAccounts from "../../../components/NavbarPagesComponents/ListedAccounts";
+import UpdateModal from "../../../components/Modals/UpdateModal";
 
 const ListOfAccounts = () => {
   return (
@@ -26,6 +27,7 @@ const ListOfAccounts = () => {
           <ListedAccounts/>
         </div>
       </div>
+      <UpdateModal/>
       <SearchModal />
     </div>
   );

@@ -1,0 +1,78 @@
+/* Modal styling */
+.modal.updates {
+  /* You can add any specific styles for the modal background here */
+}
+
+.modal.updates .modal-wrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal.updates .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.modal.updates .grid .input-group {
+  position: relative;
+  margin-top: 20px;
+}
+
+.modal.updates .grid .input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.modal.updates .grid .input-group label {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.modal.updates .grid .input-group input:focus + label,
+.modal.updates .grid .input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  /* left: 10px; */
+  font-size: 12px;
+  color: #333;
+}
+
+.modal.updates .grid .input-group input:focus {
+  border-color: #333;
+  background-color: #fff;
+}
+
+.modal.updates .description textarea {
+  margin: 1rem 0rem;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.modal.updates .description textarea::placeholder {
+  font-size: 14px;
+}
+.modal.updates .description textarea:focus {
+  border-color: #333;
+  background-color: #fff;
+}
+
+/* Optional close button styling */

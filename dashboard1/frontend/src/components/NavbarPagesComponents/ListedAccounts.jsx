@@ -6,6 +6,8 @@ import { IoFilterSharp } from "react-icons/io5";
 
 import SwitchButton from "../InputsComponents/SwitchButton";
 
+import icons from "../../icons";
+
 const data = [
   {
     accountName: "CENTENARY BANK",
@@ -231,7 +233,9 @@ const ListedAccounts = () => {
                   <SwitchButton />
                 </td>
                 <td>
-                  <button>Edit</button>
+                  <button className="small-navigation-btn">
+                    <span>{icons.editIcon}</span>
+                  </button>
                 </td>
               </tr>
             ))}
