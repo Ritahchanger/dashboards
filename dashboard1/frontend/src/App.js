@@ -62,6 +62,9 @@ import ExternalServices from "./pages/NavbarPages/ExternalServices/ExternalServi
 
 import BulkImports from "./pages/NavbarPages/BulkImports/BuilkImports";
 
+import Accounting from "./pages/NavbarPages/Accounting/Accounting";
+import ListOfAccounts from "./pages/NavbarPages/ListOfAccounts/ListOfAccounts";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -132,10 +135,9 @@ const App = () => {
           path="/fintec/admin/externalservices"
           element={<ExternalServices />}
         />
-        <Route
-          path="/fintec/admin/bulkimport"
-          element={<BulkImports/>}
-        />
+        <Route path="/fintec/admin/bulkimport" element={<BulkImports />} />
+        <Route path="/app/accounting" element={<Accounting />} />
+        <Route path="/app/accounting/coa" element={<ListOfAccounts />} />
       </Routes>
     </BrowserRouter>
   );

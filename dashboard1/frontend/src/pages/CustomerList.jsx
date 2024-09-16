@@ -7,10 +7,12 @@ import { BiShow } from "react-icons/bi";
 import "./customers_List.css";
 
 import SearchModal from "../components/SearchModal";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 import { Tabs } from "antd";
 import TabPane from "antd/es/tabs/TabPane";
+
+import { useNavigate } from "react-router-dom";
 
 // Sample customer data
 const customers = [
@@ -65,6 +67,10 @@ const customers = [
 ];
 
 const CustomerList = () => {
+  const navigate = useNavigate();
+  const openSingleCustomer = () => {
+    navigate("/fintec/customers/list/898458945");
+  };
   return (
     <div className="dashboard customers">
       <DashboardNavbar />
@@ -116,7 +122,7 @@ const CustomerList = () => {
               <tbody>
                 {/* Use map to dynamically render rows */}
                 {customers.map((customer, index) => (
-                  <tr key={index}>
+                  <tr key={index} onClick={openSingleCustomer}>
                     <td>
                       <input type="checkbox" />
                     </td>

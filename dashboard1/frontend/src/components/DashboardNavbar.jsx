@@ -7,6 +7,7 @@ import {
   faUser,
   faInbox,
   faBell,
+  faFileInvoiceDollar,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
@@ -19,6 +20,7 @@ import {
 import { useState, useEffect, useRef } from "react";
 import CustomersSidebarData from "./CustomersSidebarData";
 import NotificationsData from "./NavbarPagesComponents/NotificationsData";
+import { CiCalculator2 } from "react-icons/ci";
 
 const DashboardNavbar = () => {
   const dispatch = useDispatch();
@@ -62,14 +64,13 @@ const DashboardNavbar = () => {
   };
 
   const handleClickOutside = (event) => {
-    // Check if click is outside the customer sidebar
     if (
       customerSidebarRef.current &&
       !customerSidebarRef.current.contains(event.target)
     ) {
       setCustomerSidebar(false);
     }
-    // Check if click is outside the notification sidebar
+
     if (
       notificationSidebarRef.current &&
       !notificationSidebarRef.current.contains(event.target)
@@ -150,6 +151,11 @@ const DashboardNavbar = () => {
                   </ul>
                 </div>
               )}
+            </li>
+            <li>
+              <Link to="/app/accounting">
+                <FontAwesomeIcon icon={faFileInvoiceDollar} size="2x" />
+              </Link>
             </li>
             <li className="mobile">
               <Link to="#" onClick={() => handleDropDown("university")}>
