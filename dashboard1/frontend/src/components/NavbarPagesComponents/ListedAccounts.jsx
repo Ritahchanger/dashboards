@@ -8,6 +8,10 @@ import SwitchButton from "../InputsComponents/SwitchButton";
 
 import icons from "../../icons";
 
+import { showUpdateModal } from "../../Redux/Features/UpdateAccountSlice";
+
+import { useSelector, useDispatch } from "react-redux";
+
 const data = [
   {
     accountName: "CENTENARY BANK",
@@ -152,6 +156,8 @@ const data = [
 ];
 
 const ListedAccounts = () => {
+  const dispatch = useDispatch();
+
   const handlePrint = () => {
     window.print();
   };
@@ -160,6 +166,10 @@ const ListedAccounts = () => {
     const inputFile = document.getElementById("input-file");
 
     inputFile.click();
+  };
+
+  const handleUpdateModalShowUp = () => {
+    dispatch(showUpdateModal());
   };
 
   return (
@@ -233,7 +243,10 @@ const ListedAccounts = () => {
                   <SwitchButton />
                 </td>
                 <td>
-                  <button className="small-navigation-btn">
+                  <button
+                    className="small-navigation-btn"
+                    onClick={handleUpdateModalShowUp}
+                  >
                     <span>{icons.editIcon}</span>
                   </button>
                 </td>

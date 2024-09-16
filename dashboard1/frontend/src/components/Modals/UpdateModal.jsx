@@ -1,11 +1,27 @@
 import SwitchButton from "../InputsComponents/SwitchButton";
 import "./UpdateModal.css";
 
+import { useDispatch, useSelector } from "react-redux";
+
+import { hideUpdateModal } from "../../Redux/Features/UpdateAccountSlice";
+
 const UpdateModal = () => {
+  const dispatch = useDispatch();
+
+  const displayUpdateModal = useSelector(
+    (state) => state.updateModal.displayUpdateModal
+  );
+
+  const handleUpdateModalClose = () => {
+    dispatch(hideUpdateModal());
+  };
+
   return (
-    <div className="modal updates">
+    <div className={`modal updates ${displayUpdateModal ? "active" : null}`}>
       <div className="modal-wrapper">
-        <button className="close-icon">&times;</button>
+        <button className="close-icon" onClick={handleUpdateModalClose}>
+          &times;
+        </button>
         <div className="modal-wrapper-container">
           <p className="medium-header">UPDATE ACCOUNT</p>
           <div className="grid">

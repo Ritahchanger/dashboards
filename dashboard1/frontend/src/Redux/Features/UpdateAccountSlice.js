@@ -23,4 +23,4 @@ const UpdateAccountSlice = createSlice({
 export const { showUpdateModal, hideUpdateModal, toggleUpdateModal } =
   UpdateAccountSlice.actions;
 
-export default UpdateAccountSlice.reducer;
+export default UpdateAccountSlice;
