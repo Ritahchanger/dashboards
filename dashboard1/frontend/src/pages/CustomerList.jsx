@@ -13,6 +13,7 @@ import { Tabs } from "antd";
 import TabPane from "antd/es/tabs/TabPane";
 
 import { useNavigate } from "react-router-dom";
+import FilterTable from "../components/FilterTable/FilterTable";
 
 // Sample customer data
 const customers = [
@@ -158,6 +159,7 @@ const CustomerList = () => {
         </div>
       </div>
       <SearchModal />
+      <FilterTable />
     </div>
   );
 };

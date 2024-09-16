@@ -1,0 +1,18 @@
+.modal.filter-table {
+  align-items: end;
+}
+.modal.filter-table .modal-wrapper {
+  max-width: 500px;
+  width: 90%;
+  max-height: calc(100vh - 200px);
+}
+
+.modal.filter-table .filter-container {
+  padding: 1rem;
+}
+
+.modal.filter-table .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:15px;
+}
