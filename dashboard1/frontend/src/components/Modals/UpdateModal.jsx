@@ -53,14 +53,34 @@ const UpdateModal = () => {
           </div>
           <div className="row">
             <div className="col">
-              <p>Manual Entries Allowed</p>
+              <p
+                style={{
+                  marginBottom: "10px",
+                }}
+              >
+                Manual Entries Allowed
+              </p>
               <SwitchButton />
             </div>
             <div className="col">
-              <p>Account is Disabled</p>
+              <p
+                style={{
+                  marginBottom: "10px",
+                }}
+              >
+                Account is Disabled
+              </p>
               <SwitchButton />
             </div>
           </div>
+          <button
+            className="action-btn update-btn"
+            style={{
+              marginTop: "1rem",
+            }}
+          >
+            Update Account
+          </button>
         </div>
       </div>
     </div>
