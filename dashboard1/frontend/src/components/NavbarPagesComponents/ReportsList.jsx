@@ -6,6 +6,8 @@ import { IoFilterSharp } from "react-icons/io5";
 import { BiShow } from "react-icons/bi";
 import { FaEdit } from "react-icons/fa";
 import "./ReportsList.css";
+import { showFilterTable } from "../../Redux/Features/FilterTableSlice";
+import { useDispatch } from "react-redux";
 const ReportsList = () => {
   const handlePrint = () => {
     window.print();
@@ -139,6 +141,12 @@ const ReportsList = () => {
     },
   ];
 
+  const dispatch = useDispatch();
+
+  const handleFilterTable = (tableData) => {
+    dispatch(showFilterTable(tableData));
+  };
+
   return (
     <div className="entries reports">
       <div className="table-header">
@@ -174,7 +182,11 @@ const ReportsList = () => {
             </button>
           </li>
           <li>
-            <button>
+            <button
+              onClick={() => {
+                handleFilterTable({ name: "dennis" });
+              }}
+            >
               <IoFilterSharp />
             </button>
           </li>

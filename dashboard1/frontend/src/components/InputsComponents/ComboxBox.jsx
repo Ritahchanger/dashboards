@@ -1,7 +1,7 @@
-import React from 'react';
-import { Select } from 'antd';
+import React from "react";
+import { Select } from "antd";
 
-const { Option } = Select; 
+const { Option } = Select;
 
 const ComboxBox = ({ options, handleChange }) => {
   return (
@@ -10,6 +10,9 @@ const ComboxBox = ({ options, handleChange }) => {
       onChange={handleChange}
       showSearch
       allowClear
+      style={{
+        width: "100%",
+      }}
     >
       {options.map((option) => (
         <Option key={option.value} value={option.value}>

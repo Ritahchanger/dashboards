@@ -2,6 +2,8 @@
 import React from "react";
 import "./FilterTable.css";
 import ComboxBox from "../InputsComponents/ComboxBox";
+import { useDispatch, useSelector } from "react-redux";
+import { hideFilterTable } from "../../Redux/Features/FilterTableSlice";
 const FilterTable = () => {
   const data = {
     accountNo: [
@@ -55,22 +57,35 @@ const FilterTable = () => {
     console.log("Selected value:", value);
   };
 
+  const dispatch = useDispatch();
+
+  const displayFilterTable = useSelector(
+    (state) => state.filterModal.displayFilterTable
+  );
+
+  const handleFilterModal = () => {
+    dispatch(hideFilterTable());
+  };
   return (
-    <div className="modal filter-table">
+    <div
+      className={`modal filter-table ${displayFilterTable ? "active" : null}`}
+    >
       <div className="modal-wrapper">
         <div className="filter-container">
           <div className="header">
-            <div className="row">
+            <div className="row reset">
               <p>Filters</p>
               <p>RESET</p>
-              <p>&times;</p>
+              <button onClick={handleFilterModal}>&times;</button>
             </div>
           </div>
           <div className="body">
             <div className="grid">
               {Object.keys(data).map((key) => (
                 <div key={key} className="input-group">
-                  <p>{key.replace(/([A-Z])/g, " $1").toUpperCase()}</p>
+                  <p className="label">
+                    {key.replace(/([A-Z])/g, " $1").toUpperCase()}
+                  </p>
                   <ComboxBox options={data[key]} handleChange={handleChange} />
                 </div>
               ))}

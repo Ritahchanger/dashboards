@@ -1,5 +1,10 @@
 .modal.filter-table {
   align-items: end;
+  /* display:flex; */
+  display:none;
+}
+.modal.filter-table.active{
+  display:flex;
 }
 .modal.filter-table .modal-wrapper {
   max-width: 500px;
@@ -14,5 +19,22 @@
 .modal.filter-table .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap:15px;
+  gap: 15px;
+}
+.modal.filter-table .label {
+  font-size: 12px;
+}
+.modal.filter-table .row.reset {
+  border-bottom: 1px solid var(--darkGray);
+  margin-bottom: 0.5rem;
+}
+.modal.filter-table .row.reset p {
+  font-size: 1.2rem;
+}
+
+.modal.filter-table .row.reset button{
+  border:none;
+  background:transparent;
+  font-size:2rem;
+  cursor: pointer;
 }

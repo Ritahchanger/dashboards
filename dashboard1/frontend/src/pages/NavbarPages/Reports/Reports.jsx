@@ -5,7 +5,7 @@ import "../../Dashboard.css";
 import SearchModal from "../../../components/SearchModal";
 import PageHeaders from "../../../components/PageHeaders";
 import ReportsList from "../../../components/NavbarPagesComponents/ReportsList";
-
+import FilterTable from "../../../components/FilterTable/FilterTable";
 const Reports = () => {
   return (
     <div className="dashboard">
@@ -24,6 +24,7 @@ const Reports = () => {
           <ReportsList />
         </div>
       </div>
+      <FilterTable />
       <SearchModal />
     </div>
   );

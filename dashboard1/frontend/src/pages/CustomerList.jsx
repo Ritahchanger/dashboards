@@ -159,7 +159,6 @@ const CustomerList = () => {
         </div>
       </div>
       <SearchModal />
-      <FilterTable />
     </div>
   );
 };
