@@ -2,6 +2,22 @@
 
 This project is a **complex financial dashboard** designed to visualize and manage financial data using **Redux Toolkit**, **CSS**, **Ant Design (AntD)**, and **React Icons** for the user interface. The dashboard is built with a modern, sleek design, and it focuses on providing clear and insightful financial data visualizations and analytics.
 
+### `SCREEN 1`
+
+![Screen view 1](./frontend/src/Assets/screenshots/screen1.png)
+
+### `SCREEN 2`
+
+![Screen view 2](./frontend/src/Assets/screenshots/screen2.png)
+
+### `SCREEN 3`
+
+![Screen view 3](./frontend/src/Assets/screenshots/screen3.png)
+
+### `SCREEN 4`
+
+![Screen view 4](./frontend/src/Assets/screenshots/screen4.png)
+
 ## Features
 
 - **State Management**: The application state is efficiently managed using **Redux Toolkit**, ensuring a scalable and maintainable structure.
@@ -35,9 +51,9 @@ Explore the live version of the dashboard here:
    ```bash
    git clone https://github.com/Ritahchanger/dashboards.git
    cd dashboards/dashboard1
+   ```
 
-### `Inside frontend folder` ###
+### `Inside frontend folder`
 
-- run `npm install` 
+- run `npm install`
 - run `npm run start`
-
