@@ -7,6 +7,8 @@ import "./Dashboard.css";
 import SearchModal from "../components/SearchModal";
 import EntriesComponent from "../components/EntriesComponent";
 import PageHeaders from "../components/PageHeaders";
+import FilterTable from "../components/FilterTable/FilterTable";
+
 
 const GroupsList = () => {
   return (
@@ -26,7 +28,7 @@ const GroupsList = () => {
           <EntriesComponent />
         </div>
       </div>
-
+      <FilterTable />
       <SearchModal />
     </div>
   );

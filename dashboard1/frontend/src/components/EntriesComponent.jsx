@@ -5,6 +5,10 @@ import { GrColumns } from "react-icons/gr";
 import { IoFilterSharp } from "react-icons/io5";
 import { faDisplay } from "@fortawesome/free-solid-svg-icons";
 
+import { useDispatch, useSelector } from "react-redux";
+
+import { showFilterTable } from "../Redux/Features/FilterTableSlice";
+
 const EntriesComponent = () => {
   const handlePrint = () => {
     window.print();
@@ -14,6 +18,12 @@ const EntriesComponent = () => {
     const inputFile = document.getElementById("input-file");
 
     inputFile.click();
+  };
+
+  const dispatch = useDispatch();
+
+  const handleShowFilterTable = (tableData) => {
+    dispatch(showFilterTable(tableData));
   };
 
   return (
@@ -51,7 +61,11 @@ const EntriesComponent = () => {
             </button>
           </li>
           <li>
-            <button>
+            <button
+              onClick={() => {
+                handleShowFilterTable({ name: "dennis" });
+              }}
+            >
               <IoFilterSharp />
             </button>
           </li>

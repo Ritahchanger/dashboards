@@ -12,6 +12,7 @@ import { showUpdateModal } from "../../Redux/Features/UpdateAccountSlice";
 
 import { useSelector, useDispatch } from "react-redux";
 
+import { showFilterTable } from "../../Redux/Features/FilterTableSlice";
 const data = [
   {
     accountName: "CENTENARY BANK",
@@ -154,7 +155,6 @@ const data = [
     usage: "DETAIL",
   },
 ];
-
 const ListedAccounts = () => {
   const dispatch = useDispatch();
 
@@ -167,7 +167,9 @@ const ListedAccounts = () => {
 
     inputFile.click();
   };
-
+  const handleFilterTableModel = (tableData) => {
+    dispatch(showFilterTable(tableData));
+  };
   const handleUpdateModalShowUp = () => {
     dispatch(showUpdateModal());
   };
@@ -204,7 +206,11 @@ const ListedAccounts = () => {
             </button>
           </li>
           <li>
-            <button>
+            <button
+              onClick={() => {
+                handleFilterTableModel({ name: "dennis" });
+              }}
+            >
               <IoFilterSharp />
             </button>
           </li>

@@ -1,4 +1,4 @@
-import "../../Dashboard.css"
+import "../../Dashboard.css";
 
 import SearchModal from "../../../components/SearchModal";
 
@@ -10,7 +10,7 @@ import PageHeaders from "../../../components/PageHeaders";
 import ListedAccounts from "../../../components/NavbarPagesComponents/ListedAccounts";
 import UpdateModal from "../../../components/Modals/UpdateModal";
 
-
+import FilterTable from "../../../components/FilterTable/FilterTable";
 
 const ListOfAccounts = () => {
   return (
@@ -26,11 +26,12 @@ const ListOfAccounts = () => {
             pageWork={"Dashboard | Accounting | General Ledger"}
             mainAction={"Import share purchases"}
           />
-          <ListedAccounts/>
+          <ListedAccounts />
         </div>
       </div>
-      <UpdateModal/>
+      <UpdateModal />
       <SearchModal />
+      <FilterTable />
     </div>
   );
 };

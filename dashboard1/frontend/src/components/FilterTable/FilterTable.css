@@ -1,10 +1,10 @@
 .modal.filter-table {
   align-items: end;
   /* display:flex; */
-  display:none;
+  display: none;
 }
-.modal.filter-table.active{
-  display:flex;
+.modal.filter-table.active {
+  display: flex;
 }
 .modal.filter-table .modal-wrapper {
   max-width: 500px;
@@ -32,9 +32,9 @@
   font-size: 1.2rem;
 }
 
-.modal.filter-table .row.reset button{
-  border:none;
-  background:transparent;
-  font-size:2rem;
+.modal.filter-table .row.reset button {
+  border: none;
+  background: transparent;
+  font-size: 2rem;
   cursor: pointer;
 }

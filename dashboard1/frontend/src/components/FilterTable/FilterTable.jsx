@@ -1,9 +1,9 @@
-// src/FilterTable.js
 import React from "react";
 import "./FilterTable.css";
 import ComboxBox from "../InputsComponents/ComboxBox";
 import { useDispatch, useSelector } from "react-redux";
 import { hideFilterTable } from "../../Redux/Features/FilterTableSlice";
+
 const FilterTable = () => {
   const data = {
     accountNo: [
@@ -58,7 +58,6 @@ const FilterTable = () => {
   };
 
   const dispatch = useDispatch();
-
   const displayFilterTable = useSelector(
     (state) => state.filterModal.displayFilterTable
   );
@@ -66,12 +65,21 @@ const FilterTable = () => {
   const handleFilterModal = () => {
     dispatch(hideFilterTable());
   };
+
+  const handleWrapperClick = (e) => {
+    if (e.target.classList.contains("modal-wrapper")) {
+      handleFilterModal(); // Hide modal when clicking outside the modal content
+    }
+  };
+
   return (
     <div
       className={`modal filter-table ${displayFilterTable ? "active" : null}`}
+      onClick={handleWrapperClick} // Add click event to modal wrapper
     >
       <div className="modal-wrapper">
-        <div className="filter-container">
+        <div className="filter-container" onClick={(e) => e.stopPropagation()}>
+          {/* Stop propagation when clicking inside the filter container */}
           <div className="header">
             <div className="row reset">
               <p>Filters</p>
